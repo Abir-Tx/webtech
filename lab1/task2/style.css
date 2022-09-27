@@ -31,3 +31,28 @@
   padding: 40px;
   text-align: center;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.footer {
+  background-color: grey;
+  padding: 50px;
+  margin: 10px;
+}
+
+.header {
+  background-color: grey;
+  padding: 20px;
+  margin: 10px;
+}
