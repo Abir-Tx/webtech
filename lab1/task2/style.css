@@ -56,3 +56,13 @@ th {
   padding: 20px;
   margin: 10px;
 }
+
+.contact-bg {
+  background-image: url("https://wallpaperaccess.com/full/4533600.jpg");
+}
+
+.contact-bg h2 {
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
