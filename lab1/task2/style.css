@@ -1,0 +1,68 @@
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar li {
+  padding: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.links {
+  background-image: url("./images/dev-wallpaper.jpg");
+}
+
+.links h2 {
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.langs-bg {
+  background-image: url("./images/prog-lang.webp");
+}
+
+.langs-bg h2 {
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.footer {
+  background-color: grey;
+  padding: 50px;
+  margin: 10px;
+}
+
+.header {
+  background-color: grey;
+  padding: 20px;
+  margin: 10px;
+}
+
+.contact-bg {
+  background-image: url("https://wallpaperaccess.com/full/4533600.jpg");
+}
+
+.contact-bg h2 {
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
