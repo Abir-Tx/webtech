@@ -20,8 +20,6 @@ My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabi
 - CSS
 - PHP
 
-My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabil
-
 ## Available Sites
 
 - **Lab 1**
