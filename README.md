@@ -12,6 +12,12 @@ My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabi
 - **GitHub Profile**: https://www.github.com/abir-tx
 - **Public Email**: abirtx@yandex.com
 
+## Languages Used
 
+### Mid-Term
+
+- HTML
+- CSS
+- PHP
 
 
