@@ -1,0 +1,4 @@
+# The list of file which should be ignored by git
+
+# VSCODE settings
+.vscode/*
