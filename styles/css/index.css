@@ -22,8 +22,15 @@
   text-align: center;
 }
 * body .landing .details-con .details-card img {
-  height: 65vh;
+  width: 95%;
+  height: auto;
   border-radius: 50px;
+}
+* body .landing .lab-con {
+  width: 100%;
+}
+* body .landing .lab-con #lTitle {
+  margin-left: 20px;
 }
 * body .landing .lab-con .tasks-con ul {
   list-style: none;

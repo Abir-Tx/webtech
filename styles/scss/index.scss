@@ -23,13 +23,19 @@
           border-radius: 30px;
           text-align: center;
           img {
-            height: 65vh;
+            // height: 65%;
+            width: 95%;
+            height: auto;
             border-radius: 50px;
           }
         }
       }
 
       .lab-con {
+        width: 100%;
+        #lTitle {
+          margin-left: 20px;
+        }
         .tasks-con {
           ul {
             list-style: none;
