@@ -13,21 +13,33 @@
 * body .title h6 {
   margin-top: -15px;
 }
-* body .lab-con .tasks-con ul {
+* body .landing {
+  display: flex;
+}
+* body .landing .details-con .details-card {
+  box-shadow: 2px 2px 5px;
+  border-radius: 30px;
+  text-align: center;
+}
+* body .landing .details-con .details-card img {
+  height: 65vh;
+  border-radius: 50px;
+}
+* body .landing .lab-con .tasks-con ul {
   list-style: none;
 }
-* body .lab-con .tasks-con ul a {
+* body .landing .lab-con .tasks-con ul a {
   color: white;
   text-decoration: none;
 }
-* body .lab-con .tasks-con ul a li {
+* body .landing .lab-con .tasks-con ul a li {
   background-color: rgb(38, 83, 98);
   padding: 20px;
   margin: 10px;
   text-align: center;
   transition: 0.3s ease-in-out;
 }
-* body .lab-con .tasks-con ul a li:hover {
+* body .landing .lab-con .tasks-con ul a li:hover {
   background-color: rgb(31, 120, 140);
   box-shadow: 2px 2px 4px grey;
 }/*# sourceMappingURL=index.css.map */
