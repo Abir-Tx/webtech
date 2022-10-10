@@ -15,23 +15,44 @@
       }
     }
 
-    .lab-con {
-      .tasks-con {
-        ul {
-          list-style: none;
+    .landing {
+      display: flex;
+      .details-con {
+        .details-card {
+          box-shadow: 2px 2px 5px;
+          border-radius: 30px;
+          text-align: center;
+          img {
+            // height: 65%;
+            width: 95%;
+            height: auto;
+            border-radius: 50px;
+          }
+        }
+      }
 
-          a {
-            color: white;
-            text-decoration: none;
-            li {
-              background-color: rgb(38, 83, 98);
-              padding: 20px;
-              margin: 10px;
-              text-align: center;
-              transition: 0.3s ease-in-out;
-              &:hover {
-                background-color: rgb(31, 120, 140);
-                box-shadow: 2px 2px 4px grey;
+      .lab-con {
+        width: 100%;
+        #lTitle {
+          margin-left: 20px;
+        }
+        .tasks-con {
+          ul {
+            list-style: none;
+
+            a {
+              color: white;
+              text-decoration: none;
+              li {
+                background-color: rgb(38, 83, 98);
+                padding: 20px;
+                margin: 10px;
+                text-align: center;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                  background-color: rgb(31, 120, 140);
+                  box-shadow: 2px 2px 4px grey;
+                }
               }
             }
           }
