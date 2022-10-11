@@ -9,8 +9,8 @@
 <body>
 
   <?php
-  $nameErr = $emailErr = $genderErr = $websiteErr = "";
-  $name = $email = $gender = $comment = $website = "";
+  $nameErr = $emailErr = $dobErr =  $genderErr = $websiteErr = "";
+  $name = $email = $dob = $gender = $comment = $website = "";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
@@ -32,6 +32,8 @@
     } else {
       $email = $_POST["email"];
     }
+
+    if (empty($_POST["date"])) $dobErr = "Date of Birth is required";
   }
   ?>
 
@@ -43,7 +45,14 @@
     E-mail: <input type="text" name="email">
     <span class="error">* <?php echo $emailErr; ?></span>
     <br><br>
+
+    <label for="date">Date of Birth: </label>
+    <input type="date" name="date" id="date">
+    <span class="error">* <?php echo $dobErr; ?></span>
+
+
     <input type="submit" name="submit" value="Submit">
+
   </form>
 
 </body>
