@@ -9,8 +9,8 @@
 <body>
 
   <?php
-  $nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = "";
-  $name = $email = $dob = $gender = $comment = $degree = "";
+  $nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = $bloodErr = "";
+  $name = $email = $dob = $gender = $comment = $degree = $blood = "";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
@@ -86,6 +86,14 @@
     <input type="checkbox" name="degree[]" id="msc">
     <label for="msc">MSc</label>
     <span class="error">* <?php echo $degreeErr; ?></span>
+
+
+    <br><br>
+    <select name="bloodGroup" id="bloodGroup">
+      <option value="Apos">A+</option>
+      <option value="Bpos">B+</option>
+      <span class="error">* <?php echo $degreeErr; ?></span>
+    </select>
 
     <input type="submit" name="submit" value="Submit">
 
