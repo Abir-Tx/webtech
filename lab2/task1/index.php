@@ -19,6 +19,8 @@
       $nameErr = "Must contain at least two words";
     } elseif (!preg_match('/^[a-z]/i', $_POST["name"])) {
       $nameErr = "Name must start with letters";
+    } elseif (!preg_match('/^[a-zA-Z ".-]+$/', $_POST["name"])) {
+      $nameErr = "Can contain a-z, A-Z, period, dash only";
     } else {
       $name = $_POST["name"];
     }
