@@ -7,7 +7,8 @@
     <title>Lab 2 Task 1</title>
   </head>
   <body>
-    <form action="./validate.php" method="post">
+    <h1>PHP Form Validation</h1>
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
       <label for="name">Name</label>
       <input type="text" name="name" id="name" />
       <input type="submit" value="submit" />
