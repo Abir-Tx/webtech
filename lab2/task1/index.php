@@ -9,8 +9,8 @@
 <body>
 
   <?php
-  $nameErr = $emailErr = $dobErr =  $genderErr = $websiteErr = "";
-  $name = $email = $dob = $gender = $comment = $website = "";
+  $nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = "";
+  $name = $email = $dob = $gender = $comment = $degree = "";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
@@ -37,9 +37,19 @@
     else $dob = $_POST["date"];
 
     if (empty($_POST["gender"])) {
-      $genderErr = "Gender is required";
+      $genderErr = "You must select at least one";
     } else {
       $gender = $_POST["gender"];
+    }
+
+    if (empty($_POST["degree"])) {
+      $degreeErr = "Cannot be empty";
+    } else {
+      $checked_arr = $_POST['degree'];
+      $count = count($checked_arr);
+      if ($count < 2) {
+        $degreeErr = "At least 2 must be selected";
+      } else $degree = $_POST["degree"];
     }
   }
   ?>
@@ -64,6 +74,18 @@
     <input type="radio" name="gender" value="other">Other
     <span class="error">* <?php echo $genderErr; ?></span>
 
+
+    <br><br>
+    <label for="degree">Degree</label>
+    <input type="checkbox" name="degree[]" id="ssc">
+    <label for="ssc">SSC</label>
+    <input type="checkbox" name="degree[]" id="hsc">
+    <label for="hsc">HSC</label>
+    <input type="checkbox" name="degree[]" id="bsc">
+    <label for="bsc">BSc</label>
+    <input type="checkbox" name="degree[]" id="msc">
+    <label for="msc">MSc</label>
+    <span class="error">* <?php echo $degreeErr; ?></span>
 
     <input type="submit" name="submit" value="Submit">
 
