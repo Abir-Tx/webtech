@@ -34,6 +34,13 @@
     }
 
     if (empty($_POST["date"])) $dobErr = "Date of Birth is required";
+    else $dob = $_POST["date"];
+
+    if (empty($_POST["gender"])) {
+      $genderErr = "Gender is required";
+    } else {
+      $gender = $_POST["gender"];
+    }
   }
   ?>
 
@@ -49,6 +56,13 @@
     <label for="date">Date of Birth: </label>
     <input type="date" name="date" id="date">
     <span class="error">* <?php echo $dobErr; ?></span>
+
+    <br><br>
+    Gender:
+    <input type="radio" name="gender" value="female">Female
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="other">Other
+    <span class="error">* <?php echo $genderErr; ?></span>
 
 
     <input type="submit" name="submit" value="Submit">
