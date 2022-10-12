@@ -36,7 +36,12 @@
     }
 
     if (empty($_POST["date"])) $dobErr = "Date of Birth is required";
-    else $dob = $_POST["date"];
+    else {
+      $year = date("Y", strtotime($dob));
+      if ((int)$year < 1900 || (int)$year > 2022) {
+        $dobErr = "The selected date must be in valid range";
+      } else $dob = $_POST["date"];
+    }
 
     if (empty($_POST["gender"])) {
       $genderErr = "You must select at least one";
