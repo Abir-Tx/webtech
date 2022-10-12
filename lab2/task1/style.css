@@ -1,5 +1,7 @@
 body {
   transition: 0.3s ease-in-out;
+  padding: 10px;
+  margin: 10px;
 }
 h2 {
   text-align: center;
@@ -15,4 +17,18 @@ h6 {
 
 select {
   width: 10vw;
+}
+
+.submitBtn {
+  text-align: center;
+}
+
+.submit {
+  padding: 5px;
+  width: 10vw;
+  font-weight: bold;
+}
+
+.inpLabel {
+  font-weight: bold;
 }
