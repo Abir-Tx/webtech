@@ -51,6 +51,14 @@
         $degreeErr = "At least 2 must be selected";
       } else $degree = $_POST["degree"];
     }
+
+    if (empty($_POST["bloodGroup"])) {
+      $bloodErr = "Must select one";
+    } elseif ($_POST["bloodGroup"] == "none") {
+      $bloodErr = "Must select one";
+    } else {
+      $blood =  $_POST["bloodGroup"];
+    }
   }
   ?>
 
@@ -90,10 +98,11 @@
 
     <br><br>
     <select name="bloodGroup" id="bloodGroup">
+      <option value="none"></option>
       <option value="Apos">A+</option>
       <option value="Bpos">B+</option>
-      <span class="error">* <?php echo $degreeErr; ?></span>
     </select>
+    <span class="error"> <?php echo $bloodErr; ?></span>
 
     <input type="submit" name="submit" value="Submit">
 
