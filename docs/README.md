@@ -25,3 +25,4 @@ My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabi
 - **Lab 1**
   - [Task 1](https://abir-tx.github.io/webtech/lab1/task1/)
   - [Task 2](https://abir-tx.github.io/webtech/lab1/task2/)
+  - [Task 3](https://github.com/Abir-Tx/webtech/tree/main/lab2/task1#lab-2--task-1)
