@@ -4,6 +4,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -63,6 +64,7 @@
   ?>
 
   <h2>PHP Form Validation</h2>
+  <h6>Lab 2 Task 1 | ID: 20-42738-1</h6>
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
     Name: <input type="text" name="name">
     <span class="error">* <?php echo $nameErr; ?></span>
@@ -84,7 +86,7 @@
 
 
     <br><br>
-    <label for="degree">Degree</label>
+    <label for="degree">Degree: </label>
     <input type="checkbox" name="degree[]" id="ssc">
     <label for="ssc">SSC</label>
     <input type="checkbox" name="degree[]" id="hsc">
@@ -97,12 +99,14 @@
 
 
     <br><br>
+    <label for="bloodGroup">Blood Group</label>
     <select name="bloodGroup" id="bloodGroup">
       <option value="none"></option>
       <option value="Apos">A+</option>
       <option value="Bpos">B+</option>
     </select>
     <span class="error"> <?php echo $bloodErr; ?></span>
+    <br><br>
 
     <input type="submit" name="submit" value="Submit">
 
