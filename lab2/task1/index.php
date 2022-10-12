@@ -66,19 +66,21 @@
   <h2>PHP Form Validation</h2>
   <h6>Lab 2 Task 1 | ID: 20-42738-1</h6>
   <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-    Name: <input type="text" name="name">
+    <label for="name" class="inpLabel">Name: </label>
+    <input type="text" name="name">
     <span class="error">* <?php echo $nameErr; ?></span>
     <br><br>
-    E-mail: <input type="text" name="email">
+    <label for="email" class="inpLabel">E-mail: </label>
+    <input type="text" name="email">
     <span class="error">* <?php echo $emailErr; ?></span>
     <br><br>
 
-    <label for="date">Date of Birth: </label>
+    <label for="date" class="inpLabel">Date of Birth: </label>
     <input type="date" name="date" id="date">
     <span class="error">* <?php echo $dobErr; ?></span>
 
     <br><br>
-    Gender:
+    <label for="gender" class="inpLabel">Gender: </label>
     <input type="radio" name="gender" value="female">Female
     <input type="radio" name="gender" value="male">Male
     <input type="radio" name="gender" value="other">Other
@@ -86,7 +88,7 @@
 
 
     <br><br>
-    <label for="degree">Degree: </label>
+    <label for="degree" class="inpLabel">Degree: </label>
     <input type="checkbox" name="degree[]" id="ssc">
     <label for="ssc">SSC</label>
     <input type="checkbox" name="degree[]" id="hsc">
@@ -99,7 +101,7 @@
 
 
     <br><br>
-    <label for="bloodGroup">Blood Group</label>
+    <label for="bloodGroup" class="inpLabel">Blood Group: </label>
     <select name="bloodGroup" id="bloodGroup">
       <option value="none"></option>
       <option value="Apos">A+</option>
@@ -108,7 +110,7 @@
     <span class="error"> <?php echo $bloodErr; ?></span>
     <br><br>
 
-    <input type="submit" name="submit" value="Submit">
+    <p class="submitBtn"><input type="submit" name="submit" value="Submit" class="submit"></p>
 
   </form>
 
