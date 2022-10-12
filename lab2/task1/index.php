@@ -4,6 +4,7 @@
 <html>
 
 <head>
+  <title>Lab 2 | Task 1</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
