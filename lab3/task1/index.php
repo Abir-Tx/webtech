@@ -11,8 +11,8 @@
 <body>
 
 	<?PHP
-	$unameErr = "";
-	$uname = "";
+	$unameErr = $passErr = "";
+	$uname = $pass = "";
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,6 +24,16 @@
 			$unameErr = "Must contain at least two words";
 		} else {
 			$uname = $_POST["uname"];
+		}
+
+
+		// Password
+		if (empty($_POST["password"])) {
+			$passErr = "Password cannot be empty";
+		} elseif (strlen($_POST["password"]) < 8) {
+			$passErr = "Cannot be less than 8";
+		} elseif (strlen($_POST["password"]) > 8) {
+			!strpos($_POST["password"], "@" || "#" || "$" || "%") ? $passErr = "Must contain at least one special characer" : $pass = $_POST["password"];
 		}
 	}
 	?>
@@ -40,7 +50,8 @@
 
 
 			<label for="password">Password: </label>
-			<input type="password" name="password" id="password">
+			<input type="text" name="password" id="password">
+			<span class="error">* <?php echo $passErr; ?></span>
 			<br><br>
 
 
