@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lab 3| Task 2</title>
+
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -42,26 +44,29 @@
 			Login
 		</h2>
 
-		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-			<label for="uname">User Name: </label>
-			<input type="text" name="uname" id="uname">
-			<span class="error">* <?php echo $unameErr; ?></span>
-			<br><br>
+		<div class="formContainer">
+			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+				<label for="uname">User Name: </label>
+				<input type="text" name="uname" id="uname">
+				<span class="error">* <?php echo $unameErr; ?></span>
+				<br><br>
 
 
-			<label for="password">Password: </label>
-			<input type="text" name="password" id="password">
-			<span class="error">* <?php echo $passErr; ?></span>
-			<br><br>
+				<label for="password">Password: </label>
+				<input type="text" name="password" id="password">
+				<span class="error">* <?php echo $passErr; ?></span>
+				<br><br>
 
 
-			<input type="checkbox" name="remMe" id="remMe">
-			<label for="remMe">Remember Me</label>
-			<br><br>
+				<input type="checkbox" name="remMe" id="remMe">
+				<label class="remMe" for="remMe">Remember Me</label>
+				<br><br>
 
-			<input type="Submit" value="submit">
-			<a href="#">Forgot Password</a>
-		</form>
+				<input type="Submit" value="Submit" class="subBtn">
+				<br><br>
+				<a href="#">Forgot Password</a>
+			</form>
+		</div>
 	</div>
 </body>
 

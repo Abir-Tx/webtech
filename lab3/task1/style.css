@@ -1,0 +1,24 @@
+/* CSS Stylesheet for lab3 task 1 */
+
+.loginBox h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.formContainer {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}
+
+.remMe {
+  font-weight: bold;
+}
+
+.subBtn {
+  padding: 5px;
+  width: 15vw;
+}
