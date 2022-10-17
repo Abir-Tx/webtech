@@ -12,7 +12,7 @@
 	<!-- Number 4 -->
 	<div class="reg">
 		<?php
-		$nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = $bloodErr = "";
+		$nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = $bloodErr = $newPassErr = $conPassErr = "";
 		$name = $email = $dob = $gender = $comment = $degree = $blood = "";
 		$passed = false;
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,22 +37,19 @@
 				$email = $_POST["email"];
 				$passed = true;
 			}
-			if ($passed) {
-				$data = array();
-				$data = array(
-					'name' => $name,
-					'email' => $email,
-				);
-				$jsonData = json_encode($data);
 
-				if (!empty($jsonData)) {
-					file_put_contents("data.json", $jsonData);
-				} else echo "file not created";
+			// Password
+			if (empty($_POST["newPass"]) || empty($_POST["conPass"])) {
+				$newPassErr = $conPassErr = "This field can not be empty";
+			}
 
-
-				echo $jsonData;
-			} else echo "Note saved";
+			if ($_POST["newPass"] == $_POST["conPass"]) {
+				$newPass = $_POST["newPass"];
+				echo "Password Updated Successfully";
+			}
+			$newPassErr = "The new password do not match with the retyped password";
 		}
+
 		?>
 		<h2>Registration</h2>
 
@@ -67,7 +64,38 @@
 			<span class="error">* <?php echo $nameErr; ?></span>
 			<hr>
 
+			<label for="uname">User Name</label>
+			<input type="text" name="uname" id="uname">
+			<span class="error">* <?php echo $unameErr; ?></span>
+			<hr>
+
+
+			<label for="newPass">New Password: </label>
+			<input type="password" name="newPass" id="newPass">
+			<span class="error">* <?php echo $newPassErr; ?></span>
+			<hr>
+
+			<label for="conPass">Confirm Password: </label>
+			<input type="password" name="conPass" id="conPass">
+			<span class="error">* <?php echo $conPassErr; ?></span>
+			<hr>
+
+			<label for="gender" class="inpLabel">Gender: </label>
+			<input type="radio" name="gender" value="female">Female
+			<input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="other">Other
+			<span class="error">* <?php echo $genderErr; ?></span>
+			<hr>
+
+			<label for="date" class="inpLabel">Date of Birth: </label>
+			<input type="date" name="date" id="date">
+			<span class="error">* <?php echo $dobErr; ?></span>
+			<hr>
+
+
 			<input type="submit" value="Submit">
+			<br><br>
+			<input type="reset" value="Reset">
 		</form>
 	</div>
 </body>
