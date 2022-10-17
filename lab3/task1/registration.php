@@ -74,6 +74,26 @@
 				$uname = $_POST["uname"];
 				$passed = true;
 			}
+
+
+			if ($passed) {
+				$data = array();
+				$data = array(
+					'name' => $name,
+					'email' => $email,
+					'uname' => $uname,
+					'password' => $newPass,
+					'gender' => $gender,
+					'dob' => $dob,
+				);
+
+				$jsonData = json_encode($data);
+
+				if (!empty($jsonData)) {
+					file_put_contents("data.json", $jsonData);
+					echo "Submission Successfull";
+				} else echo "Errors occured";
+			} else echo "Can not submit data";
 		}
 
 		?>
