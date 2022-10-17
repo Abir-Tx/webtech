@@ -54,7 +54,7 @@
 		<span class="error">* <?php echo $conPassErr; ?></span>
 		<br><br>
 
-		<input type="submit" value="submit">
+		<input type="submit" value="Submit">
 	</form>
 
 </body>
