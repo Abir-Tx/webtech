@@ -14,6 +14,7 @@
 		<?php
 		$nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = $bloodErr = "";
 		$name = $email = $dob = $gender = $comment = $degree = $blood = "";
+		$passed = false;
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if (empty($_POST["name"])) {
 				$nameErr = "Name is required";
@@ -25,6 +26,7 @@
 				$nameErr = "Can contain a-z, A-Z, period, dash only";
 			} else {
 				$name = $_POST["name"];
+				$passed = true;
 			}
 
 			if (empty($_POST["email"])) {
@@ -33,17 +35,23 @@
 				$emailErr = "Invalid email format";
 			} else {
 				$email = $_POST["email"];
+				$passed = true;
 			}
+			if ($passed) {
+				$data = array();
+				$data = array(
+					'name' => $name,
+					'email' => $email,
+				);
+				$jsonData = json_encode($data);
 
-			$data = array();
-			$data = array(
-				'name' => $name,
-				'email' => $email,
-			);
-			$jsonData = json_encode($data);
+				if (!empty($jsonData)) {
+					file_put_contents("data.json", $jsonData);
+				} else echo "file not created";
 
 
-			echo $jsonData;
+				echo $jsonData;
+			} else echo "Note saved";
 		}
 		?>
 		<h2>Registration</h2>
