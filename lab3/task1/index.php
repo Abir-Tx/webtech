@@ -71,7 +71,7 @@
 
 				<input type="Submit" value="Submit" class="subBtn">
 				<br><br>
-				<a href="#">Forgot Password</a>
+				<a href="./changePass.php">Forgot Password</a>
 				<br><br>
 
 				<span class="msg"><?php echo $message; ?></span>
