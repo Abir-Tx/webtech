@@ -12,8 +12,8 @@
 	<!-- Number 4 -->
 	<div class="reg">
 		<?php
-		$nameErr = $emailErr = $dobErr =  $genderErr = $degreeErr = $bloodErr = $newPassErr = $conPassErr = "";
-		$name = $email = $dob = $gender = $comment = $degree = $blood = "";
+		$nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = "";
+		$name = $email = $dob = $gender = $uname = "";
 		$passed = false;
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if (empty($_POST["name"])) {
@@ -41,13 +41,39 @@
 			// Password
 			if (empty($_POST["newPass"]) || empty($_POST["conPass"])) {
 				$newPassErr = $conPassErr = "This field can not be empty";
+			} elseif ($_POST["newPass"] == $_POST["conPass"]) {
+				$newPass = $_POST["newPass"];
+				$passed = true;
+			} else
+				$newPassErr = "The new password do not match with the retyped password";
+
+			// Gender
+			if (empty($_POST["gender"])) {
+				$genderErr = "You must select at least one";
+			} else {
+				$gender = $_POST["gender"];
+				$passed = true;
 			}
 
-			if ($_POST["newPass"] == $_POST["conPass"]) {
-				$newPass = $_POST["newPass"];
-				echo "Password Updated Successfully";
+			// DOB
+			if (empty($_POST["date"])) $dobErr = "Date of Birth is required";
+			else {
+				$year = date("Y", strtotime($dob));
+				if ((int)$year < 1900 || (int)$year > 2022) {
+					$dobErr = "The selected date must be in valid range";
+				} else {
+					$dob = $_POST["date"];
+					$passed = true;
+				}
 			}
-			$newPassErr = "The new password do not match with the retyped password";
+
+			// User name
+			if (empty($_POST["uname"])) {
+				$unameErr = "User name can not be empty";
+			} else {
+				$uname = $_POST["uname"];
+				$passed = true;
+			}
 		}
 
 		?>
