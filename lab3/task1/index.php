@@ -16,8 +16,11 @@
 	$unameErr = $passErr = "";
 	$uname = $pass = "";
 
+	$message = "";
+
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		// User name
 		if (empty($_POST["uname"])) {
 			$unameErr = "Name is required";
 		} elseif (!preg_match('/^[a-zA-Z0-9 ".-_]+$/', $_POST["uname"])) {
@@ -26,6 +29,7 @@
 			$unameErr = "Must contain at least two words";
 		} else {
 			$uname = $_POST["uname"];
+			$message = "Submitted Successfully";
 		}
 
 
@@ -36,6 +40,9 @@
 			$passErr = "Cannot be less than 8";
 		} elseif (strlen($_POST["password"]) > 8) {
 			!strpos($_POST["password"], "@" || "#" || "$" || "%") ? $passErr = "Must contain at least one special characer" : $pass = $_POST["password"];
+		} else {
+			$pass = $_POST["password"];
+			$message = "Submitted Successfully";
 		}
 	}
 	?>
@@ -65,6 +72,9 @@
 				<input type="Submit" value="Submit" class="subBtn">
 				<br><br>
 				<a href="#">Forgot Password</a>
+				<br><br>
+
+				<span class="msg"><?php echo $message; ?></span>
 			</form>
 		</div>
 	</div>
