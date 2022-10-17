@@ -144,6 +144,10 @@
 			<input type="reset" value="Reset">
 		</form>
 	</div>
+	<br>
+	<a href="./profile.php">Update Profile</a>
+	<br>
+	<a href="./index.php">Home</a>
 </body>
 
 </html>

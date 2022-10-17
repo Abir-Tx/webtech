@@ -56,7 +56,8 @@
 
 		<input type="submit" value="Submit">
 	</form>
-
+	<br>
+	<a href="./index.php">Home</a>
 </body>
 
 </html>

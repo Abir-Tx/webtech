@@ -73,6 +73,7 @@
 				<br><br>
 				<a href="./changePass.php">Forgot Password</a>
 				<br><br>
+				<a href="./registration.php">Sign Up</a>
 
 				<span class="msg"><?php echo $message; ?></span>
 			</form>
