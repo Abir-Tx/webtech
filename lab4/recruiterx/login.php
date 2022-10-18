@@ -1,4 +1,4 @@
-<!-- Login page -->
+<!-- Login page | RecruiterX-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +15,16 @@
 <body>
 
 	<?PHP
+	// Variables
 	$unameErr = $passErr = "";
 	$uname = $pass = "";
-	$loginSuccess = false;
 
-	$message = "";
+	$loginSuccess = false;
+	$dataFileLoc = "./data.json";
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-		// User name
+		// Validate User name
 		if (empty($_POST["uname"])) {
 			$unameErr = "Name is required";
 		} elseif (!preg_match('/^[a-zA-Z0-9 ".-_]+$/', $_POST["uname"])) {
@@ -36,7 +36,7 @@
 		}
 
 
-		// Password
+		// Validate Password
 		if (empty($_POST["password"])) {
 			$passErr = "Password cannot be empty";
 		} elseif (strlen($_POST["password"]) < 8) {
@@ -47,11 +47,10 @@
 			$pass = $_POST["password"];
 		}
 
-		// matching with json data
-
+		/*  matching with json data */
 
 		// Getting the json data
-		$data = json_decode(file_get_contents("./data.json"), true);
+		$data = json_decode(file_get_contents($dataFileLoc), true);
 
 		// Compare and verify the password and username with json data
 		foreach ($data as $key => $value) {
@@ -64,10 +63,12 @@
 		$loginSuccess ? print("Success") : print("Failed");
 	}
 	?>
+
+	<!-- HTML -->
 	<div class="loginBox">
 		<div class="miniCon">
 			<h2 class="title">
-				Login
+				Login To RecruiterX
 			</h2>
 
 			<div class="formContainer">
@@ -92,8 +93,6 @@
 						<input type="Submit" value="Submit" class="subBtn">
 					</div>
 					<br><br>
-
-					<span class="msg"><?php echo $message; ?></span>
 				</form>
 			</div>
 		</div>
