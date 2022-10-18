@@ -90,7 +90,7 @@
 					<br><br>
 
 					<div class="btnCon">
-						<input type="Submit" value="Submit" class="subBtn">
+						<input type="Submit" value="Login" class="subBtn">
 					</div>
 					<br><br>
 				</form>
