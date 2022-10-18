@@ -17,6 +17,7 @@
 	<?PHP
 	$unameErr = $passErr = "";
 	$uname = $pass = "";
+	$loginSuccess = false;
 
 	$message = "";
 
@@ -50,18 +51,22 @@
 
 
 		// Getting the json data
-		$data = file_get_contents("./data.json");
-
-		$data2 = json_decode($data, true);
+		$data = json_decode(file_get_contents("./data.json"), true);
 
 		// echo $data2;
-		foreach ($data2 as $key => $value) {
+		foreach ($data as $key => $value) {
 			if ($key == "uname") {
-				if ($value == $uname) {
-					echo "Login done";
+				if ($value == $uname) $loginSuccess = true;
+				else {
+					$unameErr = "Username do not match";
+					!$loginSuccess;
 				}
 			}
+
+
+			if ($key == "password") $value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . (!$loginSuccess));
 		}
+		$loginSuccess ? print("Success") : print("Failed");
 	}
 	?>
 	<div class="loginBox">
