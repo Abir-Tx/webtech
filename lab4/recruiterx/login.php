@@ -22,16 +22,16 @@
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 		// User name
 		if (empty($_POST["uname"])) {
 			$unameErr = "Name is required";
 		} elseif (!preg_match('/^[a-zA-Z0-9 ".-_]+$/', $_POST["uname"])) {
 			$unameErr = "Can only contain alpha numeric charracters, period, dash or underscore only";
-		} elseif (str_word_count($_POST["uname"]) < 2) {
-			$unameErr = "Must contain at least two words";
+		} elseif (str_word_count($_POST["uname"]) < 1) {
+			$unameErr = "Must contain at least one word";
 		} else {
 			$uname = $_POST["uname"];
-			$message = "Submitted Successfully";
 		}
 
 
@@ -44,7 +44,23 @@
 			!strpos($_POST["password"], "@" || "#" || "$" || "%") ? $passErr = "Must contain at least one special characer" : $pass = $_POST["password"];
 		} else {
 			$pass = $_POST["password"];
-			$message = "Submitted Successfully";
+		}
+
+		// matching with json data
+
+
+		// Getting the json data
+		$data = file_get_contents("./data.json");
+
+		$data2 = json_decode($data, true);
+
+		// echo $data2;
+		foreach ($data2 as $key => $value) {
+			if ($key == "uname") {
+				if ($value == $uname) {
+					echo "Login done";
+				}
+			}
 		}
 	}
 	?>
