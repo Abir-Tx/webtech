@@ -55,8 +55,8 @@
 
 		// Compare and verify the password and username with json data
 		foreach ($data as $key => $value) {
-			if ($key == "uname") ($value == $uname) ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess));
-			if ($key == "password") $value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . (!$loginSuccess));
+			$key == "uname" ? ($value == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess))) : null;
+			$key == "password" ? ($value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . (!$loginSuccess))) : null;
 		}
 
 
