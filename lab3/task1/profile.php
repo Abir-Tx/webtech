@@ -13,7 +13,9 @@
 	$imageFileType = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// check size limit
-		if (
+		if (empty($_FILES["upFile"])) {
+			echo "You have to select an image";
+		} elseif (
 			$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 		) {
 			echo "Sorry, only JPG, JPEG, PNG files are allowed.";
