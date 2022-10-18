@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login | RecruiterX</title>
 
-	<link rel="stylesheet" href="./styles/scss/login.css">
+	<link rel="stylesheet" href="../styles/scss/login.css">
 </head>
 
 <body>
@@ -96,7 +96,7 @@
 					<!-- Task no D - Forgot Password-->
 					<div class="linkCon">
 						<p>
-							<a href="#">Forgot Password</a>
+							<a href="./passReset.php">Forgot Password</a>
 						</p>
 					</div>
 				</form>
