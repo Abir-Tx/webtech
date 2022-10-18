@@ -90,7 +90,7 @@
 				$jsonData = json_encode($data);
 
 				if (!empty($jsonData)) {
-					file_put_contents("data.json", $jsonData);
+					file_put_contents("data.json", $jsonData, FILE_APPEND);
 					echo "Submission Successfull";
 				} else echo "Errors occured";
 			} else echo "Can not submit data";
