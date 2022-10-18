@@ -10,17 +10,44 @@
 </head>
 
 <body>
+	<?php
+	// variables
+	$emailErr = "";
+	$email = "";
+	$msg = "";
+	$dataFileLoc = "../data.json";
+
+
+	// Validate email
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		if (empty($_POST["email"])) {
+			$emailErr = "Email is required";
+		} elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+			$emailErr = "Invalid email format";
+		} else {
+			$email = $_POST["email"];
+		}
+
+		// Getting the data
+		$data = json_decode(file_get_contents($dataFileLoc), true);
+
+		foreach ($data as $key => $value) {
+			$key == "email" ? ($value == $email ? $msg = "Account password reset successfull" : $msg = "Sorry ! Can not reset your password") : null;
+		}
+	}
+	?>
 	<div class="passResCon">
 		<h2>
 			Forgot Password?
 		</h2>
 
 		<div class="formCon">
-			<form action="" method="post">
+			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
 				<label for="email">Enter Email: </label>
 				<input type="email" name="email" id="email">
+				<span class="error">* <?php echo $emailErr; ?></span>
 				<br><br>
-				<span class="msg">Status: </span>
+				<span class="msg">Status: <?php echo $msg; ?></span>
 				<hr>
 
 				<input type="submit" value="Reset">

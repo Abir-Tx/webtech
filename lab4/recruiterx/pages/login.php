@@ -20,7 +20,7 @@
 	$uname = $pass = "";
 
 	$loginSuccess = false;
-	$dataFileLoc = "./data.json";
+	$dataFileLoc = "../data.json";
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
