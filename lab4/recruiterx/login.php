@@ -93,9 +93,16 @@
 						<input type="Submit" value="Login" class="subBtn">
 					</div>
 					<br><br>
+					<!-- Task no D - Forgot Password-->
+					<div class="linkCon">
+						<p>
+							<a href="#">Forgot Password</a>
+						</p>
+					</div>
 				</form>
 			</div>
 		</div>
+
 	</div>
 </body>
 
