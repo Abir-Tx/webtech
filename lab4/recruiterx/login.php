@@ -53,19 +53,14 @@
 		// Getting the json data
 		$data = json_decode(file_get_contents("./data.json"), true);
 
-		// echo $data2;
+		// Compare and verify the password and username with json data
 		foreach ($data as $key => $value) {
-			if ($key == "uname") {
-				if ($value == $uname) $loginSuccess = true;
-				else {
-					$unameErr = "Username do not match";
-					!$loginSuccess;
-				}
-			}
-
-
+			if ($key == "uname") ($value == $uname) ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess));
 			if ($key == "password") $value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . (!$loginSuccess));
 		}
+
+
+		// Handle success or unsuccessfull login
 		$loginSuccess ? print("Success") : print("Failed");
 	}
 	?>
