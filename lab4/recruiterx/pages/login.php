@@ -60,25 +60,6 @@
 			foreach ($data as $key => $value) {
 				$key == "uname" ? ($value == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess))) : null;
 				$loginSuccess ? ($key == "password" ? ($value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null) : null;
-
-				/* 			if ($key == "uname") {
-				if ($value == $uname) $loginSuccess = true;
-				else {
-					$unameErr = "Username do not match";
-					!$loginSuccess;
-				}
-			}
-
-			if ($loginSuccess) {
-				if ($key == "password") {
-					if ($value == $pass) {
-						$loginSuccess = true;
-					} else {
-						$passErr = "Password do not match";
-						$loginSuccess = false;
-					}
-				}
-			} */
 			}
 		}
 
@@ -120,7 +101,7 @@
 					<!-- Task no D - Forgot Password-->
 					<div class="linkCon">
 						<p>
-							<a href="./passReset.php">Forgot Password</a>
+							<a href="./passReset.php">Forgot Password?</a>
 						</p>
 					</div>
 				</form>
