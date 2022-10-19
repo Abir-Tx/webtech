@@ -65,7 +65,7 @@
 
 
 		// Handle success or unsuccessfull login
-		$loginSuccess ? print("Success") : print("Failed");
+		$loginSuccess ? header("Location: ../index.php") . (die()) : print("Login sFailed");
 	}
 	?>
 
