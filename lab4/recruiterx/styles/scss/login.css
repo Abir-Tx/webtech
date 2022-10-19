@@ -43,4 +43,7 @@
 .loginBox .miniCon .formContainer .error {
   color: red;
   font-style: italic;
+}
+.loginBox .miniCon .formContainer .linkCon p {
+  text-align: center;
 }/*# sourceMappingURL=login.css.map */
