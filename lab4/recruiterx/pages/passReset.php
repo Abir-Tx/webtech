@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<?php @include "./header.php" ?>
 	<?php
 	// variables
 	$emailErr = "";
@@ -48,12 +49,15 @@
 				<span class="error">* <?php echo $emailErr; ?></span>
 				<br><br>
 				<span class="msg">Status: <?php echo $msg; ?></span>
-				<hr>
+				<!-- <hr> -->
+				<br><br>
 
 				<input type="submit" value="Reset">
+				<br><br>
 			</form>
 		</div>
 	</div>
+	<?php @include "./footer.php" ?>
 </body>
 
 </html>

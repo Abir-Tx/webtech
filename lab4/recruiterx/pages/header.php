@@ -8,7 +8,7 @@
 			</li>
 
 			<li>
-				<a href="http://localhost/webtech/lab4/recruiterx/pages/login.php">Login</a>
+				<a href="/webtech/lab4/recruiterx/pages/login.php">Login</a>
 			</li>
 		</ul>
 	</nav>
