@@ -13,6 +13,7 @@
 	<div class="welcome">
 		<h2>Welcome To RecruiterX</h2>
 	</div>
+	<?php @include "./pages/footer.php" ?>
 </body>
 
 </html>
