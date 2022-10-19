@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<?PHP
 	// Variables
 	$unameErr = $passErr = "";
@@ -65,7 +64,7 @@
 
 
 		// Handle success or unsuccessfull login
-		$loginSuccess ? header("Location: ../index.php") . (die()) : print("Login sFailed");
+		$loginSuccess ? header("Location: ../index.php") . (die()) : print("Login Failed");
 	}
 	?>
 
