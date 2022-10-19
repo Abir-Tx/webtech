@@ -22,6 +22,7 @@
 	$loginSuccess = false;
 	$dataFileLoc = "../data.json";
 
+	$inputOk = false;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// Validate User name
@@ -33,6 +34,7 @@
 			$unameErr = "Must contain at least one word";
 		} else {
 			$uname = $_POST["uname"];
+			$inputOk = true;
 		}
 
 
@@ -45,6 +47,7 @@
 			!strpos($_POST["password"], "@" || "#" || "$" || "%") ? $passErr = "Must contain at least one special characer" : $pass = $_POST["password"];
 		} else {
 			$pass = $_POST["password"];
+			$inputOk = true;
 		}
 
 		/*  matching with json data */
@@ -53,9 +56,30 @@
 		$data = json_decode(file_get_contents($dataFileLoc), true);
 
 		// Compare and verify the password and username with json data
-		foreach ($data as $key => $value) {
-			$key == "uname" ? ($value == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess))) : null;
-			$key == "password" ? ($value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . (!$loginSuccess))) : null;
+		if ($inputOk) {
+			foreach ($data as $key => $value) {
+				$key == "uname" ? ($value == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess))) : null;
+				$loginSuccess ? ($key == "password" ? ($value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null) : null;
+
+				/* 			if ($key == "uname") {
+				if ($value == $uname) $loginSuccess = true;
+				else {
+					$unameErr = "Username do not match";
+					!$loginSuccess;
+				}
+			}
+
+			if ($loginSuccess) {
+				if ($key == "password") {
+					if ($value == $pass) {
+						$loginSuccess = true;
+					} else {
+						$passErr = "Password do not match";
+						$loginSuccess = false;
+					}
+				}
+			} */
+			}
 		}
 
 
