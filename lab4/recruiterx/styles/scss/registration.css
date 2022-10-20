@@ -1,14 +1,5 @@
 .reg {
   padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-.reg .inputsCon {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  align-items: center;
 }
 .reg .error {
   color: red;

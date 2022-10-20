@@ -17,6 +17,7 @@
 	$nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = "";
 	$name = $email = $dob = $gender = $uname = "";
 	$passed = false;
+	$dataFileLoc = "../data.json";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (empty($_POST["name"])) {
 			$nameErr = "Name is required";
@@ -92,7 +93,7 @@
 			$jsonData = json_encode($data);
 
 			if (!empty($jsonData)) {
-				file_put_contents("data.json", $jsonData, FILE_APPEND);
+				file_put_contents($dataFileLoc, $jsonData, FILE_APPEND);
 				echo "Submission Successfull";
 			} else echo "Errors occured";
 		} else echo "Can not submit data";
@@ -115,7 +116,7 @@
 				<span class="error">* <?php echo $nameErr; ?></span>
 				<hr>
 
-				<label for="uname">User Name</label>
+				<label for="uname">User Name: </label>
 				<input type="text" name="uname" id="uname">
 				<span class="error">* <?php echo $unameErr; ?></span>
 				<hr>
