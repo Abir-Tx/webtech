@@ -54,19 +54,27 @@
 		/*  matching with json data */
 
 		// Getting the json data
-		$data = json_decode(file_get_contents($dataFileLoc), true);
+		$data = json_decode(file_get_contents($dataFileLoc));
 
 		// Compare and verify the password and username with json data
 		if ($inputOk) {
-			foreach ($data as $key => $value) {
-				$key == "uname" ? ($value == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . (!$loginSuccess))) : null;
-				$loginSuccess ? ($key == "password" ? ($value == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null) : null;
+			foreach ($data as $d) {
+				($d->uname == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . ($loginSuccess = false)));
+				$loginSuccess ? ($d->password == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null;
 			}
 		}
 
 
 		// Handle success or unsuccessfull login
-		$loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
+		// $loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
+		if ($loginSuccess) {
+			session_start();
+			header("Location: ./dashboard.php");
+			$_SESSION["uname"] = $uname;
+			die();
+		} else {
+			echo "Failed Login";
+		}
 	}
 	?>
 

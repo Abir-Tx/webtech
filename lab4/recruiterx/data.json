@@ -2,8 +2,8 @@
 	{
 		"name": "Abir Mushfiqur Rahman",
 		"email": "mushfiqurrohomanabir@gmail.com",
-		"uname": "abir",
-		"password": "nibir12345@#",
+		"uname": "nibir",
+		"password": "abir12918@#",
 		"gender": "male",
 		"dob": "2022-10-24"
 	},
@@ -14,5 +14,13 @@
 		"password": "nibir12345@#",
 		"gender": "female",
 		"dob": "2022-10-10"
+	},
+	{
+		"name": "mac book",
+		"email": "mac@gmail.com",
+		"uname": "mac",
+		"password": "mac12345@#",
+		"gender": "male",
+		"dob": "2022-10-31"
 	}
 ]

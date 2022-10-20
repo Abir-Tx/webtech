@@ -11,6 +11,10 @@
 
 <body>
 	<?php @include "./header.php" ?>
+	<?php
+	session_start();
+	echo $_SESSION["uname"];
+	?>
 	Dashboard
 	<?php @include "./footer.php" ?>
 </body>
