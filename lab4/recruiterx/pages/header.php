@@ -10,6 +10,10 @@
 			<li>
 				<a href="/webtech/lab4/recruiterx/pages/login.php">Login</a>
 			</li>
+
+			<li>
+				<a href="/webtech/lab4/recruiterx/pages/registration.php">Registration</a>
+			</li>
 		</ul>
 	</nav>
 </header>
