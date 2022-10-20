@@ -1,8 +1,18 @@
-{
-	"name": "Abir Mushfiqur Rahman",
-	"email": "mushfiqurrohomanabir@gmail.com",
-	"uname": "abir",
-	"password": "abir12918@#",
-	"gender": "male",
-	"dob": "2022-10-26"
-}
+[
+	{
+		"name": "Abir Mushfiqur Rahman",
+		"email": "mushfiqurrohomanabir@gmail.com",
+		"uname": "abir",
+		"password": "nibir12345@#",
+		"gender": "male",
+		"dob": "2022-10-24"
+	},
+	{
+		"name": "Mushfiqur Rahman Abir",
+		"email": "abirtx@yandex.com",
+		"uname": "abir_",
+		"password": "nibir12345@#",
+		"gender": "female",
+		"dob": "2022-10-10"
+	}
+]

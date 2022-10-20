@@ -80,20 +80,23 @@
 
 
 		if ($passed) {
-			$data = array();
+			$currentData = file_get_contents($dataFileLoc);
+			$newData = json_decode($currentData, true);
+
 			$data = array(
 				'name' => $name,
 				'email' => $email,
 				'uname' => $uname,
 				'password' => $newPass,
 				'gender' => $gender,
-				'dob' => $dob,
+				'dob' => $dob
 			);
+			$newData[] = $data;
 
-			$jsonData = json_encode($data);
+			$jsonData = json_encode($newData);
 
 			if (!empty($jsonData)) {
-				file_put_contents($dataFileLoc, $jsonData, FILE_APPEND);
+				file_put_contents($dataFileLoc, $jsonData);
 				echo "Submission Successfull";
 			} else echo "Errors occured";
 		} else echo "Can not submit data";
