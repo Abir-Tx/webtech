@@ -2,11 +2,13 @@
 
 .loginBox {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
+  // margin: 20px;
+  padding: 30px;
   .miniCon {
     width: 80vw;
     height: 60vh;

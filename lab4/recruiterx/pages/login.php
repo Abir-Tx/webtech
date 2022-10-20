@@ -10,9 +10,11 @@
 	<title>Login | RecruiterX</title>
 
 	<link rel="stylesheet" href="../styles/scss/login.css">
+	<link rel="stylesheet" href="../styles/scss/header.css">
 </head>
 
 <body>
+	<?php @include "./header.php" ?>
 	<?PHP
 	// Variables
 	$unameErr = $passErr = "";
@@ -64,7 +66,7 @@
 
 
 		// Handle success or unsuccessfull login
-		$loginSuccess ? header("Location: ../index.php") . (die()) : print("Login Failed");
+		$loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
 	}
 	?>
 
@@ -108,6 +110,7 @@
 		</div>
 
 	</div>
+	<?php @include "./footer.php" ?>
 </body>
 
 </html>
