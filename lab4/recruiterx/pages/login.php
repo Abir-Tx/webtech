@@ -1,4 +1,4 @@
-<!-- Login page | RecruiterX-->
+<!-- Login page | RecruiterX | By Mushfiqur Rahman Abir-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,12 +55,33 @@
 
 		// Getting the json data
 		$data = json_decode(file_get_contents($dataFileLoc));
+		$found = false;
 
 		// Compare and verify the password and username with json data
 		if ($inputOk) {
 			foreach ($data as $d) {
-				($d->uname == $uname ? $loginSuccess = true : (($unameErr = "Username do not match") . ($loginSuccess = false)));
-				$loginSuccess ? ($d->password == $pass ? $loginSuccess = true : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null;
+				// $d->uname == $uname ? ($loginSuccess = true) . ($found = true) : (($unameErr = "Username do not match") . ($loginSuccess = false));
+				// $loginSuccess ? ($d->password == $pass ? ($loginSuccess = true) . ($found = true) : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null;
+
+				if ($found) {
+					break;
+				} else {
+					if ($d->uname == $uname) {
+						$loginSuccess = true;
+						$found = true;
+					} else {
+						$unameErr = "Username do not match";
+						$loginSuccess = false;
+					}
+
+					if ($d->password == $pass) {
+						$loginSuccess = true;
+						$found = true;
+					} else {
+						$passErr = "Password do not match!";
+						$loginSuccess = false;
+					}
+				}
 			}
 		}
 
