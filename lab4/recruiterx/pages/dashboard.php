@@ -13,9 +13,21 @@
 	<?php @include "./header.php" ?>
 	<?php
 	session_start();
-	echo "Welcome " . $_SESSION["uname"];
+	$dataFileLoc = "../data.json";
+	$data = json_decode(file_get_contents($dataFileLoc));
+	foreach ($data as $key => $item) {
+		// echo $item->email;
+		// echo var_dump($key);
+		foreach ($item as $i => $val) {
+			if ($_SESSION['uname'] == $val) {
+				echo $item->email;
+			}
+			/* echo $i;
+			echo "</br>"; */
+		}
+	}
 	?>
-	Dashboard
+
 	<?php @include "./footer.php" ?>
 </body>
 
