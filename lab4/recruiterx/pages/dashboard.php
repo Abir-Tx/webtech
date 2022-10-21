@@ -15,17 +15,19 @@
 	session_start();
 	$dataFileLoc = "../data.json";
 	$data = json_decode(file_get_contents($dataFileLoc));
-	foreach ($data as $key => $item) {
-		// echo $item->email;
-		// echo var_dump($key);
-		foreach ($item as $i => $val) {
+	$name =  $email = "";
+
+	foreach ($data as $key => $obj) {
+		// Fetch information of only the logged in user using session
+		foreach ($obj as $item => $val) {
 			if ($_SESSION['uname'] == $val) {
-				echo $item->email;
+				$name = $obj->name;
+				$email = $obj->email;
 			}
-			/* echo $i;
-			echo "</br>"; */
 		}
 	}
+
+	echo "<H1>Welcome " . $name . "</H1>";
 	?>
 
 	<?php @include "./footer.php" ?>
