@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home | Recruiter</title>
 	<link rel="stylesheet" href="./styles/scss/header.css">
+	<link rel="stylesheet" href="./styles/scss/index.css">
 </head>
 
 <body>
