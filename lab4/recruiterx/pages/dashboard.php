@@ -27,7 +27,7 @@
 		}
 	}
 
-	echo "<H1>Welcome " . $name . "</H1>";
+	echo "<H1>Welcome " . ucwords($name) . "</H1>";
 	?>
 
 	<?php @include "./footer.php" ?>
