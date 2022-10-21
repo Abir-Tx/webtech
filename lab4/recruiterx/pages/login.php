@@ -25,6 +25,7 @@
 
 	$inputOk = false;
 	$found = false;
+	$cookieTimeout = 120;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// Validate User name
@@ -50,6 +51,17 @@
 		} else {
 			$pass = $_POST["password"];
 			$inputOk = true;
+		}
+
+		// Remember Me check
+		if (!empty($_POST['remMe'])) {
+			setcookie("uname", $uname, time() + $cookieTimeout);
+			setcookie("password", $pass, time() + $cookieTimeout);
+			echo "Cookie set successfully";
+		} else {
+			setcookie("uname", "");
+			setcookie("password", "");
+			echo "Cookie not set";
 		}
 
 		/*  matching with json data */
@@ -92,18 +104,24 @@
 			<div class="formContainer">
 				<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
 					<label for="uname">User Name: </label>
-					<input class="inp" type="text" name="uname" id="uname">
+					<input class="inp" type="text" name="uname" id="uname" value=<?php if (isset($_COOKIE['uname'])) {
+														echo $_COOKIE['uname'];
+													} ?>>
 					<span class="error">* <?php echo $unameErr; ?></span>
 					<br><br>
 
 
 					<label for="password">Password: </label>
-					<input class="inp" type="text" name="password" id="password">
+					<input class="inp" type="text" name="password" id="password" value=<?php if (isset($_COOKIE['password'])) {
+															echo $_COOKIE['password'];
+														} ?>>
 					<span class="error">* <?php echo $passErr; ?></span>
 					<br><br>
 
 
-					<input type="checkbox" name="remMe" id="remMe">
+					<input type="checkbox" name="remMe" id="remMe" <?php if (isset($_COOKIE['uname'])) {
+												echo "checked='checked'";
+											} ?>>
 					<label class="remMe" for="remMe">Remember Me</label>
 					<br><br>
 
