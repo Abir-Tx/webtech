@@ -24,6 +24,7 @@
 	$dataFileLoc = "../data.json";
 
 	$inputOk = false;
+	$found = false;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// Validate User name
@@ -55,7 +56,6 @@
 
 		// Getting the json data
 		$data = json_decode(file_get_contents($dataFileLoc));
-		$found = false;
 
 		// Compare and verify the password and username with json data
 		if ($inputOk) {
@@ -76,9 +76,9 @@
 			header("Location: ./dashboard.php");
 			$_SESSION["uname"] = $uname;
 			die();
-		} else {
+		} /* else {
 			echo "Failed Login";
-		}
+		} */
 	}
 	?>
 

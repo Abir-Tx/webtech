@@ -18,6 +18,7 @@
 	$email = "";
 	$msg = "";
 	$dataFileLoc = "../data.json";
+	$found = false;
 
 
 	// Validate email
@@ -31,10 +32,11 @@
 		}
 
 		// Getting the data
-		$data = json_decode(file_get_contents($dataFileLoc), true);
+		$data = json_decode(file_get_contents($dataFileLoc));
 
-		foreach ($data as $key => $value) {
-			$key == "email" ? ($value == $email ? $msg = "Account password reset successfull" : $msg = "Sorry ! Can not reset your password") : null;
+		foreach ($data as $d) {
+			if (!$found) ($d->email == $email ? ($msg = "Account password reset successfull") . ($found = true) : $msg = "Sorry ! Can not reset your password");
+			else break;
 		}
 	}
 	?>

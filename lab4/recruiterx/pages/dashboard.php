@@ -13,7 +13,7 @@
 	<?php @include "./header.php" ?>
 	<?php
 	session_start();
-	echo $_SESSION["uname"];
+	echo "Welcome " . $_SESSION["uname"];
 	?>
 	Dashboard
 	<?php @include "./footer.php" ?>

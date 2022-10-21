@@ -22,5 +22,13 @@
 		"password": "mac12345@#",
 		"gender": "male",
 		"dob": "2022-10-31"
+	},
+	{
+		"name": "sac book",
+		"email": "sac@gmail.com",
+		"uname": "sac",
+		"password": "nibir12345@#",
+		"gender": "male",
+		"dob": "2022-11-01"
 	}
 ]
