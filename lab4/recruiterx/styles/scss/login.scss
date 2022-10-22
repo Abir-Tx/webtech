@@ -39,6 +39,22 @@
         .subBtn {
           width: 15vw;
           padding: 5px;
+          background-color: lightblue;
+          transition: 0.2s ease-in;
+          font-size: larger;
+          // border: none;
+          // box-shadow: 2px 2px 5px;
+
+          &:hover {
+            background-color: lightblue;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+          }
+          &:active {
+            box-shadow: inset 2px 2px 3px black;
+          }
         }
       }
       .remMe {

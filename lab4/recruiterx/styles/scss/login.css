@@ -36,6 +36,19 @@
 .loginBox .miniCon .formContainer .btnCon .subBtn {
   width: 15vw;
   padding: 5px;
+  background-color: lightblue;
+  transition: 0.2s ease-in;
+  font-size: larger;
+}
+.loginBox .miniCon .formContainer .btnCon .subBtn:hover {
+  background-color: lightblue;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.loginBox .miniCon .formContainer .btnCon .subBtn:active {
+  box-shadow: inset 2px 2px 3px black;
 }
 .loginBox .miniCon .formContainer .remMe {
   font-weight: bold;

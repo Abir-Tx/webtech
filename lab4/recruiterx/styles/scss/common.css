@@ -36,5 +36,9 @@ footer {
 }
 footer a {
   text-decoration: none;
+  color: blue;
+  transition: 0.3s ease-in;
+}
+footer a:hover {
   color: red;
 }/*# sourceMappingURL=common.css.map */
