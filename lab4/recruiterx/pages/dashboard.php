@@ -33,7 +33,7 @@
 		print('<a href="./logout.php">logout</a>');
 		echo "<H1>Welcome " . ucwords($name) . "</H1>";
 		// Including the subpages/components
-		@include "./account_details/subMenu.php";
+		@include "./subMenu.php";
 	} else {
 		echo "<p> You need to be logged in to be able to view this page</p>";
 		echo "<p>Please Login</p>";

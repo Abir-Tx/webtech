@@ -1,5 +1,5 @@
 <?php
-function fetch($dataLoc)
+function fetch($dataLoc, $logoutUrl)
 {
 	session_start();
 	if (isset($_SESSION['uname'])) {
@@ -18,6 +18,9 @@ function fetch($dataLoc)
 				}
 			}
 		}
-		return $details;
+		// Displaying the details
+		echo "<code>logged in as " . $_SESSION['uname'] . " | </code>";
+		print('<a href=' . $logoutUrl . '>logout</a>');
 	}
+	return $details;
 }
