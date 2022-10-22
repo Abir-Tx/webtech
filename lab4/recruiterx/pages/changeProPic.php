@@ -34,7 +34,7 @@
 			<label for="updateProPic">Select New Profile Image: </label>
 			<input type="file" name="updateProPic" id="updateProPic">
 			<br><br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Update">
 		</form>
 	</div>
 	<?php @include "./footer.php" ?>
