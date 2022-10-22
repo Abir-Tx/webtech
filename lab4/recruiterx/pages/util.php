@@ -21,6 +21,10 @@ function fetch($dataLoc, $logoutUrl)
 		// Displaying the details
 		echo "<code>logged in as " . $_SESSION['uname'] . " | </code>";
 		print('<a href=' . $logoutUrl . '>logout</a>');
+	} else {
+		echo "<p> You need to be logged in to be able to view this page</p>";
+		echo "<p>Please <a href='/webtech/lab4/recruiterx/pages/login.php'>Login</a></p>";
+		exit;
 	}
 	return $details;
 }
