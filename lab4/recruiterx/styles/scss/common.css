@@ -41,4 +41,21 @@ footer a {
 }
 footer a:hover {
   color: red;
+}
+
+.passResCon {
+  display: flex;
+  flex-direction: column;
+}
+.passResCon h2 {
+  text-align: center;
+}
+.passResCon .msg {
+  font-style: italic;
+  color: blue;
+}
+
+.error {
+  color: red;
+  font-style: italic;
 }/*# sourceMappingURL=common.css.map */

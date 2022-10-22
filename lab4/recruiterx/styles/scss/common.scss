@@ -46,3 +46,22 @@ footer {
     }
   }
 }
+
+// Password Reset
+.passResCon {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    text-align: center;
+  }
+  .msg {
+    font-style: italic;
+    color: blue;
+  }
+}
+
+// For all the error messages
+.error {
+  color: red;
+  font-style: italic;
+}
