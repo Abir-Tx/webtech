@@ -8,6 +8,7 @@
 	<title>Registration | RecruiterX</title>
 	<link rel="stylesheet" href="../styles/scss/header.css">
 	<link rel="stylesheet" href="../styles/scss/registration.css">
+	<link rel="stylesheet" href="../styles/scss/common.css">
 </head>
 
 <body>

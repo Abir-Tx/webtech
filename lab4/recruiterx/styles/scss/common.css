@@ -21,4 +21,20 @@
   text-decoration: none;
   font-weight: bold;
   color: inherit;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  background-color: var(--header, lightblue);
+  font-size: 0.9rem;
+  transition: 0.3s ease-in;
+  box-shadow: 1px 1px 5px;
+}
+footer a {
+  text-decoration: none;
+  color: red;
 }/*# sourceMappingURL=common.css.map */

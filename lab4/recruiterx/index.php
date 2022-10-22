@@ -8,6 +8,7 @@
 	<title>Home | Recruiter</title>
 	<link rel="stylesheet" href="./styles/scss/header.css">
 	<link rel="stylesheet" href="./styles/scss/index.css">
+	<link rel="stylesheet" href="./styles/scss/common.css">
 </head>
 
 <body>

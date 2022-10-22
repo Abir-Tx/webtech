@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="../styles/scss/login.css">
 	<link rel="stylesheet" href="../styles/scss/header.css">
+	<link rel="stylesheet" href="../styles/scss/common.css">
 </head>
 
 <body>
