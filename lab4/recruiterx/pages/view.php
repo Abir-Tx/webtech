@@ -17,11 +17,18 @@
 
 	$details  =  fetch("../data.json", "./logout.php");
 	@include "./subMenu.php";
+
+	if (isset($details[5]) && !empty($details[5])) {
+		$ifile = $details[5];
+	} else $ifile = "avatar.svg";
 	?>
 	<!-- htmL -->
 	<h2>Profile</h2>
 
 	<div class="details">
+		<div class="proPic">
+			<img src='../images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>' height="100px">
+		</div>
 		<label for="name">Name : <?php echo ucFirst($details[0]) ?></label>
 		<br><br>
 		<label for="email">Email : <?php echo $details[1] ?></label>
