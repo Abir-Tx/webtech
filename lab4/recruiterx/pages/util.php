@@ -14,7 +14,7 @@ function fetch($dataLoc, $logoutUrl)
 				if ($_SESSION['uname'] == $val) {
 					// $name = $obj->name;
 					// $email = $obj->email;
-					$details = array($obj->name, $obj->email, $obj->gender, $obj->dob, $obj->password);
+					$details = array($obj->name, $obj->email, $obj->gender, $obj->dob, $obj->password, $obj->imageFile);
 				}
 			}
 		}

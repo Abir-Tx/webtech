@@ -14,10 +14,13 @@
 	<?php @include "./header.php" ?>
 
 	<?php
-	$nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = "";
-	$name = $email = $dob = $gender = $uname = "";
+	$nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = $proPicErr = "";
+	$name = $email = $dob = $gender = $uname = $proPic = $newPass = "";
 	$passed = false;
 	$dataFileLoc = "../data.json";
+
+
+
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (empty($_POST["name"])) {
 			$nameErr = "Name is required";
@@ -78,11 +81,11 @@
 			$passed = true;
 		}
 
+		// Profile Picture Upload & check
 		$target_dir = "../images/";
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
 		// Check if image file is a actual image or fake image
 		if (isset($_POST["submit"])) {
 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -97,7 +100,7 @@
 
 		// Check if file already exists
 		if (file_exists($target_file)) {
-			echo "Sorry, file already exists.";
+			$proPicErr =  "Sorry, file already exists.";
 			$uploadOk = 0;
 		}
 
@@ -110,19 +113,20 @@
 		// Allow certain file formats
 		if (
 			$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-			&& $imageFileType != "gif"
+			/* && $imageFileType != "gif" */
 		) {
-			echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+			$proPicErr =  "Sorry, only JPG, JPEG, PNG files are allowed.";
 			$uploadOk = 0;
 		}
 
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-			echo "Sorry, your file was not uploaded.";
+			$proPicErr =  "Sorry, your file was not uploaded.";
 			// if everything is ok, try to upload file
 		} else {
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 				echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+				$passed = true;
 			} else {
 				echo "Sorry, there was an error uploading your file.";
 			}
@@ -139,7 +143,8 @@
 				'uname' => $uname,
 				'password' => $newPass,
 				'gender' => $gender,
-				'dob' => $dob
+				'dob' => $dob,
+				'imageFile' => htmlspecialchars(basename($_FILES["fileToUpload"]["name"]))
 			);
 			$newData[] = $data;
 
@@ -198,9 +203,9 @@
 			<span class="error">* <?php echo $dobErr; ?></span>
 			<hr>
 
-			Select image to upload:
+			<label for="fileToupload">Profile Picture: </label>
 			<input type="file" name="fileToUpload" id="fileToUpload">
-			<!-- <input type="submit" value="Upload Image" name="submit"> -->
+			<span class="error">* <?php echo $proPicErr; ?></span>
 			<hr>
 
 
