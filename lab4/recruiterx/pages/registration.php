@@ -162,6 +162,9 @@
 
 	<!-- HTML Codes -->
 	<div class="reg">
+		<h2>
+			Register For RecruiterX
+		</h2>
 		<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 			<div class="inputsCon">
 				<label for="name">Name: </label>

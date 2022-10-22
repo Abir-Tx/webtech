@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Forgot Password | Lab 3 - Task 1</title>
 	<link rel="stylesheet" href="../styles/scss/header.css">
+	<link rel="stylesheet" href="../styles/scss/common.css">
 </head>
 
 <body> <?php
