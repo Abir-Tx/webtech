@@ -116,7 +116,7 @@
 
 
 					<label for="password">Password: </label>
-					<input class="inp" type="text" name="password" id="password" value=<?php if (isset($_COOKIE['password'])) {
+					<input class="inp" type="password" name="password" id="password" value=<?php if (isset($_COOKIE['password'])) {
 															echo $_COOKIE['password'];
 														} ?>>
 					<span class="error">* <?php echo $passErr; ?></span>
