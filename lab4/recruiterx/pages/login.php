@@ -16,6 +16,10 @@
 <body>
 	<?php @include "./header.php" ?>
 	<?PHP
+	session_start();
+	if (isset($_SESSION['uname'])) {
+		header('Location: /webtech/lab4/recruiterx/pages/dashboard.php');
+	}
 	// Variables
 	$unameErr = $passErr = "";
 	$uname = $pass = "";
