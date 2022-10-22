@@ -33,7 +33,7 @@
 	</div>
 	<div class="editBtnCon">
 		<button>
-			<a href="#">Edit Profile</a>
+			<a href="./edit.php">Edit Profile</a>
 		</button>
 	</div>
 
