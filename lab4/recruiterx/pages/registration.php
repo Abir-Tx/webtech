@@ -200,7 +200,7 @@
 
 			Select image to upload:
 			<input type="file" name="fileToUpload" id="fileToUpload">
-			<input type="submit" value="Upload Image" name="submit">
+			<!-- <input type="submit" value="Upload Image" name="submit"> -->
 			<hr>
 
 
