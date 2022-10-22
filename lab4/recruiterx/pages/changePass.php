@@ -6,12 +6,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Forgot Password | Lab 3 - Task 1</title>
+	<link rel="stylesheet" href="../styles/scss/header.css">
 </head>
 
-<body>
+<body> <?php
+	@include "./header.php";
+	@include "./util.php";
+
+
+	$details  =  fetch("../data.json", "./logout.php");
+	@include "./subMenu.php";
+	?>
 	<?php
 	$currPassErr = $newPassErr = $conPassErr = "";
-	$currPass = "abir1298@";
+	$currPass = $details[4];
 	$newPass = $conPass = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,8 +64,6 @@
 
 		<input type="submit" value="Submit">
 	</form>
-	<br>
-	<a href="./index.php">Home</a>
 </body>
 
 </html>
