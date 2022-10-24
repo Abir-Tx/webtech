@@ -1,6 +1,8 @@
 <header>
 	<nav>
-		<h1>RecruiterX</h1>
+		<a href="/webtech/lab4/recruiterx">
+			<h1>RecruiterX</h1>
+		</a>
 
 		<ul>
 			<li>

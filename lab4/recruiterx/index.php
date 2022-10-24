@@ -15,7 +15,6 @@
 	<?php @include "./pages/header.php" ?>
 	<div class="welcome">
 		<h2>Welcome To RecruiterX</h2>
-
 	</div>
 
 	<div class="quickThings">

@@ -7,6 +7,14 @@ nav {
   background-color: var(--header, lightblue);
   font-size: 1.5rem;
   transition: 0.3s ease-in;
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: white;
+    }
+  }
 
   box-shadow: 1px 1px 5px;
   ul {
