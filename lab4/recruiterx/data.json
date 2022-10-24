@@ -43,5 +43,14 @@
 		"gender": "male",
 		"dob": "2022-10-25",
 		"imageFile": "20-42738-1.jpg"
+	},
+	{
+		"name": "Mr John",
+		"email": "john@yahoo.com",
+		"uname": "john",
+		"password": "john12918@#",
+		"gender": "male",
+		"dob": "1999-02-17",
+		"imageFile": "naruto.jpg"
 	}
 ]
