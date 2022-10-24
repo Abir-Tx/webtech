@@ -28,16 +28,18 @@
 
 	<div class="details">
 		<div class="proPic">
-			<img src='../images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>' height="100px">
+			<img src='../images/<?php echo $ifile ?>' alt='Profile picture of <?php echo $details[0] ?>'>
 		</div>
-		<label for="name">Name : <?php echo ucFirst($details[0]) ?></label>
-		<br><br>
-		<label for="email">Email : <?php echo $details[1] ?></label>
-		<br><br>
-		<label for="gender">Gender : <?php echo ucfirst($details[2]) ?></label>
-		<br><br>
-		<label for="dob">Date of Birth : <?php echo $details[3] ?></label>
-		<br><br>
+		<div class="textDet">
+			<label for="name">Name : <?php echo ucFirst($details[0]) ?></label>
+			<br><br>
+			<label for="email">Email : <?php echo $details[1] ?></label>
+			<br><br>
+			<label for="gender">Gender : <?php echo ucfirst($details[2]) ?></label>
+			<br><br>
+			<label for="dob">Date of Birth : <?php echo $details[3] ?></label>
+			<br><br>
+		</div>
 	</div>
 	<div class="editBtnCon">
 		<button>

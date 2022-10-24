@@ -65,3 +65,40 @@ footer {
   color: red;
   font-style: italic;
 }
+
+// CSS for the view dashboard/page
+
+.details {
+  padding: 40px;
+  .proPic {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 30vh;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .textDet {
+    padding: 10px;
+    background-color: lightcyan;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px;
+    label {
+      font-weight: bold;
+    }
+  }
+}
+.editBtnCon {
+  text-align: center;
+  button {
+    padding: 10px;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
