@@ -27,8 +27,9 @@
   padding: 20px;
 }
 .loginBox .miniCon .formContainer .inp {
-  height: 2.5vh;
+  height: 3vh;
   width: 30vw;
+  border-radius: 30px;
 }
 .loginBox .miniCon .formContainer .btnCon {
   text-align: center;
