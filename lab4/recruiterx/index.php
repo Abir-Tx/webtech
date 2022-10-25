@@ -20,7 +20,7 @@
 	<div class="quickThings">
 		<h3>A Little About Us</h3>
 		<p>
-			<span>R</span> is a digital & smart recruitement website. We are here to make your company or club's recruitment system
+			<span>R</span>ecruiterX is a digital & smart recruitement website. We are here to make your company or club's recruitment system
 			and hassle easier than ever. Just use our website to make your next recruitment and you will be never leaving this site.
 		</p>
 
