@@ -1,0 +1,3 @@
+[submodule "EzRecruit"]
+	path = EzRecruit
+	url = git@github.com:Abir-Tx/EzRecruit.git
