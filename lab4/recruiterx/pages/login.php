@@ -15,9 +15,11 @@
 </head>
 
 <body>
-	<?php @include "./header.php" ?>
-	<?PHP
+	<?php
 	session_start();
+	@include "./header.php";
+	?>
+	<?PHP
 	if (isset($_SESSION['uname'])) {
 		header('Location: /webtech/lab4/recruiterx/pages/dashboard.php');
 	}

@@ -1,3 +1,7 @@
+<?php
+// session_start()
+?>
+
 <header>
 	<nav>
 		<a href="/webtech/lab4/recruiterx">
@@ -10,7 +14,7 @@
 			</li>
 
 			<li>
-				<a href="/webtech/lab4/recruiterx/pages/login.php">Login</a>
+				<a href="/webtech/lab4/recruiterx/pages/login.php"><?php (isset($_SESSION['uname'])) ? print("Logout") : print("Login") ?></a>
 			</li>
 
 			<li>
