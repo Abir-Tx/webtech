@@ -18,6 +18,12 @@
 
     <a href="./pages/view_product.php">
       <li>View Product (B)</li>
+    </a>
+
+    <!--     <a href="./pages/edit_product.php">
+      <li>Edit Product (C)</li>
+    </a> -->
+
   </ul>
 </body>
 

@@ -44,8 +44,6 @@
 			<td><a href='./edit_product.php?id=$id'>Edit</a></td>
 			<td><a href='./delete_product.php?id=$id'>Delete</a></td>
 			</tr>";
-			// Show only the products that have a display value of 1 in the database
-
 		}
 
 
