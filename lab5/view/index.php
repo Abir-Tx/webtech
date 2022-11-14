@@ -15,6 +15,9 @@
     <a href="./pages/add_product.php">
       <li>Add Product (A)</li>
     </a>
+
+    <a href="./pages/view_product.php">
+      <li>View Product (B)</li>
   </ul>
 </body>
 
