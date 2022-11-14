@@ -10,6 +10,9 @@
 </head>
 
 <body>
+	<h2>
+		Add Product
+	</h2>
 	<form action="../../controller/create_product.php" method="POST">
 		<label for="product_name">Name</label>
 		<input type="text" name="product_name" id="product_name" required>
@@ -19,6 +22,9 @@
 		<br>
 		<label for="selling_price">Selling Price</label>
 		<input type="number" name="selling_price" id="selling_price" required>
+		<br>
+		<input type="checkbox" name="display" id="display">
+		<label for="display">Display</label>
 		<br>
 		<input type="submit" value="Save">
 	</form>
