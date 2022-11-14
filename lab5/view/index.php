@@ -24,6 +24,9 @@
       <li>Edit Product (C)</li>
     </a> -->
 
+    <a href="./pages/search_product.php">
+      <li>Search Product (E)</li>
+
   </ul>
 </body>
 

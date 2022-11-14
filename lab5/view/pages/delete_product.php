@@ -31,7 +31,6 @@
 	}
 	// Loop through the products and display them in the table	
 	header('location: ./view_product.php');
-
 	?>
 
 </body>
