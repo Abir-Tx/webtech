@@ -10,12 +10,12 @@
 </head>
 
 <body>
-	<?php @include "../../controller/finder.php" ?>
+	<!-- <?php @include "../../controller/finder.php" ?> -->
 	<h2>
 		Search Product
 	</h2>
 	<!-- Create a form with search input -->
-	<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+	<form action="../../controller/finder.php" method="POST">
 		<input type="text" name="search" placeholder="Search by name">
 		<input type="submit" name="submit" value="Search">
 	</form>
