@@ -15,26 +15,30 @@
 		}
 		// Loop through the products and display them in the table
 		echo "
-	<h1>Search Result</h1>
-
-	<table border='1'>
-	<tr>
-	<th>Id</th>
-	<th>Name</th>
-	<th>Buying Price</th>
-	<th>Selling Price</th>
-	<th>Display</th>
-	</tr>";
-		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			$isDisplayed = $row['display'] == 1 ? "Yes" : "No";
-			echo "<tr>";
-			echo "<td>" . $row['id'] . "</td>";
-			echo "<td>" . $row['product_name'] . "</td>";
-			echo "<td>" . $row['buying_price'] . "</td>";
-			echo "<td>" . $row['selling_price'] . "</td>";
-			echo "<td>" . $isDisplayed . "</td>";
-			echo "</tr>";
+	<h1>Search Result</h1>";
+		if ($stmt->rowCount() > 0) {
+			echo "<table border='1' cellpadding='10'>";
+			echo "<tr>
+					<th>Product ID</th>
+					<th>Product Name</th>
+					<th>Buying Price</th>
+					<th>Selling Price</th>
+					<th>Display</th>
+				</tr>";
+			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+				extract($row);
+				$isDisplayed = $row['display'] == 1 ? "Yes" : "No";
+				echo "<tr>
+						<td>{$id}</td>
+						<td>{$product_name}</td>
+						<td>{$buying_price}</td>
+						<td>{$selling_price}</td>
+						<td>{$isDisplayed}</td>
+					</tr>";
+			}
+			echo "</table>";
+		} else {
+			echo "No products found.";
 		}
-		echo "</table>";
 	}
 	?>
