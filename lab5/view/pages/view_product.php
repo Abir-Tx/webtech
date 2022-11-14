@@ -9,7 +9,6 @@
 </head>
 
 <body>
-	<!-- Create a table with Name and Profit header. Name coloumn will show the products name and profile will show the profit. Each product will have a edit and delete link -->
 	<h2>
 		View Product
 	</h2>
@@ -26,7 +25,7 @@
 		include_once '../../model/db_connect.php';
 		// Create a query to select all the products
 		$conn = db_conn();
-		$selectQuery = 'SELECT * FROM `products`';
+		$selectQuery = 'SELECT * FROM `products` where `display` = "1"';
 		try {
 			$stmt = $conn->query($selectQuery);
 		} catch (PDOException $e) {
@@ -45,7 +44,12 @@
 			<td><a href='./edit_product.php?id=$id'>Edit</a></td>
 			<td><a href='./delete_product.php?id=$id'>Delete</a></td>
 			</tr>";
+			// Show only the products that have a display value of 1 in the database
+
 		}
+
+
+
 		?>
 </body>
 
