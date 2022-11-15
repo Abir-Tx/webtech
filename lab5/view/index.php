@@ -11,6 +11,9 @@
 </head>
 
 <body>
+  <h1>
+    Lab Task 5
+  </h1>
   <ul>
     <a href="./pages/add_product.php">
       <li>Add Product (A)</li>
