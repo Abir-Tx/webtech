@@ -12,13 +12,15 @@
 </head>
 
 <body>
-	<?php @include "./header.php" ?>
+	<?php
+	@include "./header.php";
+	@require_once "../scripts/db_connect.php";
+	?>
 
 	<?php
 	$nameErr = $emailErr = $dobErr =  $genderErr = $newPassErr = $conPassErr = $unameErr = $proPicErr = "";
 	$name = $email = $dob = $gender = $uname = $proPic = $newPass = "";
 	$passed = false;
-	$dataFileLoc = "../data.json";
 
 
 
@@ -105,12 +107,6 @@
 			$uploadOk = 0;
 		}
 
-		// Check file size
-		/* if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, your file is too large.";
-  $uploadOk = 0;
-} */
-
 		// Allow certain file formats
 		if (
 			$imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -135,27 +131,46 @@
 
 
 		if ($passed) {
-			$currentData = file_get_contents($dataFileLoc);
-			$newData = json_decode($currentData, true);
+			// Assignment
+			$name = $_POST["name"];
+			$email = $_POST["email"];
+			$password = $_POST["newPass"];
+			$cpassword = $_POST["conPass"];
+			$dob = $_POST["date"];
+			$proPic = $target_file;
+			$gender = $_POST["gender"];
+			$uname = $_POST["uname"];
 
-			$data = array(
-				'name' => $name,
-				'email' => $email,
-				'uname' => $uname,
-				'password' => $newPass,
-				'gender' => $gender,
-				'dob' => $dob,
-				'imageFile' => htmlspecialchars(basename($_FILES["fileToUpload"]["name"]))
-			);
-			$newData[] = $data;
+			// Check both the password
+			if ($password === $cpassword) {
+				$pass = true;
+			}
 
-			$jsonData = json_encode($newData);
+			// DB
+			$conn = db_connect();
+			$insertQuery = "INSERT INTO users (name, email, uname, password, gender, dob, imageFile) VALUES (:name, :email,:uname, :password, :gender, :dob, :imageFile)";
+			try {
+				$stmt = $conn->prepare($insertQuery);
+				if ($pass) {
+					$stmt->execute([
+						":name" => $name,
+						":email" => $email,
+						":uname" => $uname,
+						":password" => $password,
+						":gender" => $gender,
+						":dob" => $dob,
+						":imageFile" => $_FILES["fileToUpload"]["name"]
 
-			if (!empty($jsonData)) {
-				file_put_contents($dataFileLoc, $jsonData);
-				echo "Submission Successfull";
-			} else echo "Errors occured";
-		} else echo "Can not submit data";
+					]);
+
+					echo "User added successfully";
+				}
+			} catch (PDOException $e) {
+				echo "Error: " . $e->getMessage();
+			}
+
+			$conn = null;
+		}
 	}
 
 	?>
