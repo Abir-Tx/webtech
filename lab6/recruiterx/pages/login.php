@@ -18,23 +18,14 @@
 	<?php
 	session_start();
 	@include "./header.php";
-	?>
-	<?PHP
-	if (isset($_SESSION['uname'])) {
-		header('Location: /webtech/lab6/recruiterx/pages/dashboard.php');
-	}
-	// Variables
+	@require_once "../scripts/db_connect.php";
+
+
 	$unameErr = $passErr = "";
-	$uname = $pass = "";
-
-	$loginSuccess = false;
-	$dataFileLoc = "../data.json";
-
-	$inputOk = false;
-	$found = false;
 	$cookieTimeout = 120;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 		// Validate User name
 		if (empty($_POST["uname"])) {
 			$unameErr = "Name is required";
@@ -71,33 +62,39 @@
 			echo "Cookie not set";
 		}
 
-		/*  matching with json data */
-
-		// Getting the json data
-		$data = json_decode(file_get_contents($dataFileLoc));
-
-		// Compare and verify the password and username with json data
-		if ($inputOk) {
-			foreach ($data as $d) {
-				if ($found) break;
-				else {
-					$d->uname == $uname ? ($loginSuccess = true) . ($found = true) : (($unameErr = "Username do not match") . ($loginSuccess = false));
-					$loginSuccess ? ($d->password == $pass ? ($loginSuccess = true) . ($found = true) : (($passErr = "Password do not match!") . ($loginSuccess = false))) : null;
-				}
-			}
-		}
 
 
+		/*  matching with Database */
 		// Handle success or unsuccessfull login
 		// $loginSuccess ? header("Location: ./dashboard.php") . (die()) : print("Login Failed");
-		if ($loginSuccess) {
+		// DB
+		$conn = db_connect();
+		$selectQuery = "SELECT * FROM users WHERE uname = :uname AND password = :password";
+		try {
+			$stmt = $conn->prepare($selectQuery);
+			$stmt->execute([
+				":uname" => $uname,
+				":password" => $password
+			]);
+
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if (count($result) > 0) {
+				$pass = true;
+			}
+		} catch (PDOException $e) {
+			echo "Error: " . $e->getMessage();
+		}
+
+		if ($pass) {
 			session_start();
 			header("Location: ./dashboard.php");
 			$_SESSION["uname"] = $uname;
 			die();
-		} /* else {
-			echo "Failed Login";
-		} */
+			/* Store the whole user info into an array in session */
+		} else {
+			echo "Login failed";
+		}
 	}
 	?>
 
