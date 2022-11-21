@@ -32,7 +32,7 @@
 		// Displaying the details
 		echo "<code>logged in as " . $_SESSION['uname'] . " | </code>";
 		print('<a href="./logout.php">logout</a>');
-		echo "<H1>Welcome " . ucwords($name) . "</H1>";
+		echo "<H1>Welcome " . ucwords($_SESSION['uname']) . "</H1>";
 		// Including the subpages/components
 		@include "./subMenu.php";
 	} else {
