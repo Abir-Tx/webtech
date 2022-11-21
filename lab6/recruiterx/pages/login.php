@@ -21,7 +21,7 @@
 	?>
 	<?PHP
 	if (isset($_SESSION['uname'])) {
-		header('Location: /webtech/lab4/recruiterx/pages/dashboard.php');
+		header('Location: /webtech/lab6/recruiterx/pages/dashboard.php');
 	}
 	// Variables
 	$unameErr = $passErr = "";
