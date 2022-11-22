@@ -46,27 +46,19 @@ function validateForm() {
   if (username == "") {
     document.getElementById("usernameErr").innerHTML = "Username is required";
     return false;
-  }
-  //   if username is greater than 2 words then show error
-  else if (username.split(" ").length > 1) {
+  } else if (username.split(" ").length > 1) {
     document.getElementById("usernameErr").innerHTML =
       "Username must be only one word";
     return false;
-  }
-  //   if username is less than 2 characters then show error
-  else if (username.length < 2) {
+  } else if (username.length < 2) {
     document.getElementById("usernameErr").innerHTML =
       "Username must be at least 2 characters";
     return false;
-  }
-  //   if username is greater than 20 characters then show error
-  else if (username.length > 20) {
+  } else if (username.length > 20) {
     document.getElementById("usernameErr").innerHTML =
       "Username must be less than 20 characters";
     return false;
-  }
-  //   if username is not alphanumeric then show error
-  else if (!username.match(/^[a-zA-Z0-9]+$/)) {
+  } else if (!username.match(/^[a-zA-Z0-9]+$/)) {
     document.getElementById("usernameErr").innerHTML =
       "Username must be alphanumeric";
     return false;
@@ -76,28 +68,21 @@ function validateForm() {
   if (password == "") {
     document.getElementById("passwordErr").innerHTML = "Password is required";
     return false;
-  }
-  //   if password is less than 8 characters then show error
-  else if (password.length < 8) {
+  } else if (password.length < 8) {
     document.getElementById("passwordErr").innerHTML =
       "Password must be at least 8 characters";
     return false;
-  }
-  //   if password is greater than 20 characters then show error
-  else if (password.length > 20) {
+  } else if (password.length > 20) {
     document.getElementById("passwordErr").innerHTML =
       "Password must be less than 20 characters";
     return false;
-  }
-  //   if password is not alphanumeric then show error
-  else if (!password.match(/^[a-zA-Z0-9]+$/)) {
+  } else if (!password.match(/^[a-zA-Z0-9]+$/)) {
     document.getElementById("passwordErr").innerHTML =
       "Password must be alphanumeric";
     return false;
   }
 
-  //   phone validation
-  //   if +880 is present in phone then truncate it
+  //   phone validation if +880 is present in phone then truncate it
   if (phone.match(/^\+880/)) {
     phone = phone.substring(3);
   }
@@ -106,20 +91,14 @@ function validateForm() {
   if (phone == "") {
     document.getElementById("phoneErr").innerHTML = "Phone is required";
     return false;
-  }
-  //   if phone is not numeric then show error
-  else if (!phone.match(/^[0-9]+$/)) {
+  } else if (!phone.match(/^[0-9]+$/)) {
     document.getElementById("phoneErr").innerHTML = "Phone must be numeric";
     return false;
-  }
-  //   if phone is less than 11 characters then show error
-  else if (phone.length < 11) {
+  } else if (phone.length < 11) {
     document.getElementById("phoneErr").innerHTML =
       "Phone must be at least 11 characters";
     return false;
-  }
-  //   if phone is greater than 14 characters then show error
-  else if (phone.length > 12) {
+  } else if (phone.length > 12) {
     document.getElementById("phoneErr").innerHTML =
       "Phone must be less than 12 characters";
     return false;
@@ -129,15 +108,11 @@ function validateForm() {
   if (address == "") {
     document.getElementById("addressErr").innerHTML = "Address is required";
     return false;
-  }
-  //   if address is less than 10 characters then show error
-  else if (address.length < 10) {
+  } else if (address.length < 10) {
     document.getElementById("addressErr").innerHTML =
       "Address must be at least 10 characters";
     return false;
-  }
-  //   if address is greater than 100 characters then show error
-  else if (address.length > 100) {
+  } else if (address.length > 100) {
     document.getElementById("addressErr").innerHTML =
       "Address must be less than 100 characters";
     return false;
