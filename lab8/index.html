@@ -1,0 +1,76 @@
+<!-- Lab 8 Codes by Mushfiqur Rahman Abir -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 8 | JS Validation</title>
+    <script src="./scripts/validate.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>JS Form Validation</h1>
+      </div>
+
+      <div class="formCon">
+        <form name="myForm" action="" method="post" onsubmit="validateForm()">
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" />
+          <span id="nameErr"></span>
+          <br />
+
+          <label for="email">Email: </label>
+          <input type="text" name="email" id="email" />
+          <span id="emailErr"></span>
+          <br />
+
+          <label for="username ">username</label>
+          <input type="text" name="username" id="username" title="username" />
+          <span id="usernameErr"></span>
+          <br />
+
+          <label for="password">Password: </label>
+          <input type="password" name="password" id="password" />
+          <span id="passwordErr"></span>
+          <br />
+
+          <label for="phone">Phone: </label>
+          <input type="text" name="phone" id="phone" />
+          <span id="phoneErr"></span>
+          <br />
+
+          <label for="address">Address: </label>
+          <input type="text" name="address" id="address" />
+          <span id="addressErr"></span>
+          <br />
+
+          <label for="city">City: </label>
+          <input type="text" name="city" id="city" />
+          <span id="cityErr"></span>
+          <br />
+
+          <label for="state">State: </label>
+          <input type="text" name="state" id="state" />
+          <span id="stateErr"></span>
+          <br />
+
+          <label for="zip">Zip: </label>
+          <input type="text" name="zip" id="zip" />
+          <span id="zipErr"></span>
+          <br />
+
+          <label for="country">Country: </label>
+          <input type="text" name="country" id="country" />
+          <span id="countryErr"></span>
+          <br />
+
+          <input type="submit" value="Submit" />
+          <input type="reset" value="reset" />
+          <br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
