@@ -15,7 +15,12 @@
       </div>
 
       <div class="formCon">
-        <form name="myForm" action="" method="post" onsubmit="validateForm()">
+        <form
+          name="myForm"
+          action=""
+          method="post"
+          onsubmit="return validateForm()"
+        >
           <label for="name">Name: </label>
           <input type="text" name="name" id="name" />
           <span id="nameErr"></span>
@@ -46,7 +51,7 @@
           <span id="addressErr"></span>
           <br />
 
-          <label for="city">City: </label>
+          <!-- <label for="city">City: </label>
           <input type="text" name="city" id="city" />
           <span id="cityErr"></span>
           <br />
@@ -59,11 +64,58 @@
           <label for="zip">Zip: </label>
           <input type="text" name="zip" id="zip" />
           <span id="zipErr"></span>
-          <br />
+          <br /> 
 
           <label for="country">Country: </label>
           <input type="text" name="country" id="country" />
           <span id="countryErr"></span>
+          <br />
+	  -->
+
+          <!-- Create an dropdown list for countries with about 20 options  -->
+          <label for="country">Country: </label>
+          <select name="country" id="country">
+            <option value="none">None</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="Korea">Korea</option>
+            <option value="Russia">Russia</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+          </select>
+          <span id="countryErr"></span>
+          <br />
+
+          <!-- create an input for dob -->
+          <label for="dob">Date of Birth: </label>
+          <input type="date" name="dob" id="dob" />
+          <span id="dobErr"></span>
+          <br />
+
+          <label for="education">Education: </label>
+          <input type="checkbox" name="education" id="ssc" value="SSC" />
+          SSC
+          <input type="checkbox" name="education" id="hsc" value="HSC" />
+          HSC
+          <input type="checkbox" name="education" id="bsc" value="BSc" />
+          BSc
+          <input type="checkbox" name="education" id="msc" value="MSc" />
+          MSc
+          <span id="educationErr"></span>
           <br />
 
           <input type="submit" value="Submit" />
