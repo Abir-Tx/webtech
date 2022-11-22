@@ -9,6 +9,8 @@ function validateForm() {
   var address = document.forms["myForm"]["address"].value;
   var dob = document.forms["myForm"]["dob"].value;
   var country = document.forms["myForm"]["country"].value;
+
+  var validatePassed = false;
   // Name validation
   if (name == "") {
     document.getElementById("nameErr").innerHTML = "Name is required";
@@ -31,6 +33,9 @@ function validateForm() {
     document.getElementById("nameErr").innerHTML =
       "Name must start with a letter and can only contain letters, numbers, periods, dashes or underscores";
     return false;
+  } else {
+    document.getElementById("nameErr").innerHTML = "";
+    validatePassed = true;
   }
 
   //   email validation
@@ -40,6 +45,9 @@ function validateForm() {
   } else if (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
     document.getElementById("emailErr").innerHTML = "Email is invalid";
     return false;
+  } else {
+    document.getElementById("emailErr").innerHTML = "";
+    validatePassed = true;
   }
 
   //   username validation
@@ -62,6 +70,9 @@ function validateForm() {
     document.getElementById("usernameErr").innerHTML =
       "Username must be alphanumeric";
     return false;
+  } else {
+    document.getElementById("usernameErr").innerHTML = "";
+    validatePassed = true;
   }
 
   //   password validation
@@ -80,6 +91,9 @@ function validateForm() {
     document.getElementById("passwordErr").innerHTML =
       "Password must be alphanumeric";
     return false;
+  } else {
+    document.getElementById("passwordErr").innerHTML = "";
+    validatePassed = true;
   }
 
   //   phone validation if +880 is present in phone then truncate it
@@ -102,6 +116,9 @@ function validateForm() {
     document.getElementById("phoneErr").innerHTML =
       "Phone must be less than 12 characters";
     return false;
+  } else {
+    document.getElementById("phoneErr").innerHTML = "";
+    validatePassed = true;
   }
 
   //   address validation
@@ -116,6 +133,9 @@ function validateForm() {
     document.getElementById("addressErr").innerHTML =
       "Address must be less than 100 characters";
     return false;
+  } else {
+    document.getElementById("addressErr").innerHTML = "";
+    validatePassed = true;
   }
 
   // validate dob
@@ -135,6 +155,9 @@ function validateForm() {
         "You must be at least 18 years old";
       return false;
     }
+  } else {
+    document.getElementById("dobErr").innerHTML = "";
+    validatePassed = true;
   }
 
   // validate Education
@@ -142,26 +165,48 @@ function validateForm() {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
     return false;
+  } else {
+    document.getElementById("educationErr").innerHTML = "";
+    validatePassed = true;
   }
   if (document.getElementById("hsc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
     return false;
+  } else {
+    document.getElementById("educationErr").innerHTML = "";
+    validatePassed = true;
   }
+
   if (document.getElementById("bsc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
     return false;
+  } else {
+    document.getElementById("educationErr").innerHTML = "";
+    validatePassed = true;
   }
+
   if (document.getElementById("msc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
     return false;
+  } else {
+    document.getElementById("educationErr").innerHTML = "";
+    validatePassed = true;
   }
 
   // validate Country
   if (country == "none") {
     document.getElementById("countryErr").innerHTML = "Country is required";
     return false;
+  } else {
+    document.getElementById("countryErr").innerHTML = "";
+    validatePassed = true;
+  }
+
+  // if all validation passed then return true
+  if (validatePassed) {
+    return true;
   }
 }
