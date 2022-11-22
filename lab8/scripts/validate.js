@@ -161,10 +161,11 @@ function validateForm() {
   }
 
   // validate Education
+  var eduValidated = false;
   if (document.getElementById("ssc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
-    return false;
+    eduValidated = true;
   } else {
     document.getElementById("educationErr").innerHTML = "";
     validatePassed = true;
@@ -172,7 +173,7 @@ function validateForm() {
   if (document.getElementById("hsc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
-    return false;
+    eduValidated = true;
   } else {
     document.getElementById("educationErr").innerHTML = "";
     validatePassed = true;
@@ -181,10 +182,12 @@ function validateForm() {
   if (document.getElementById("bsc").checked == false) {
     document.getElementById("educationErr").innerHTML =
       "At least one education is required";
-    return false;
+    eduValidated = true;
   } else {
-    document.getElementById("educationErr").innerHTML = "";
-    validatePassed = true;
+    if ((eduValidated = true)) {
+      document.getElementById("educationErr").innerHTML = "";
+      validatePassed = true;
+    } else return false;
   }
 
   if (document.getElementById("msc").checked == false) {
