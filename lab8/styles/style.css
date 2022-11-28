@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+body h1 {
+  text-align: center;
+}
+body input {
+  margin: 5px;
+  height: 20px;
+}
+body .error {
+  color: red;
+  padding: 5px;
+  font-style: italic;
+}/*# sourceMappingURL=style.css.map */

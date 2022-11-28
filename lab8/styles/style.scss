@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  h1 {
+    text-align: center;
+  }
+
+  input {
+    margin: 5px;
+    height: 20px;
+  }
+
+  .error {
+    color: red;
+    padding: 5px;
+    font-style: italic;
+  }
+}
