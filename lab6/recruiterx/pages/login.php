@@ -24,6 +24,7 @@
 	$unameErr = $passErr = "";
 	$uname = $pass = "";
 	$cookieTimeout = 120;
+	$passed = false;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -81,13 +82,13 @@
 			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 			if (count($result) > 0) {
-				$pass = true;
+				$passed = true;
 			}
 		} catch (PDOException $e) {
 			echo "Error: " . $e->getMessage();
 		}
 
-		if ($pass) {
+		if ($passed) {
 			session_start();
 			header("Location: ./dashboard.php");
 			$_SESSION["uname"] = $uname;
