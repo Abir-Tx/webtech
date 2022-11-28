@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  color: rgb(139, 127, 127);
+  text-shadow: 2px 2px 10px;
+
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    font-size: larger;
+    &:hover {
+      color: blue;
+    }
+  }
+  li {
+    margin: 15px;
+    width: 25vw;
+    height: 80%;
+    box-shadow: 3px 3px 12px black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: lightblue;
+    }
+  }
+}
