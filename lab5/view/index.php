@@ -33,6 +33,12 @@
       <li>Search Product (E)</li>
 
   </ul>
+
+  <!-- create a footer -->
+  <footer>
+    <p>Created by: <a href="https://www.github.com/Abir-Tx">Abir</a></p>
+  </footer>
+
 </body>
 
 </html>
