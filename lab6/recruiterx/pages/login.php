@@ -57,11 +57,11 @@
 		if (!empty($_POST['remMe'])) {
 			setcookie("uname", $uname, time() + $cookieTimeout);
 			setcookie("password", $pass, time() + $cookieTimeout);
-			echo "Cookie set successfully";
+			// echo "Cookie set successfully";
 		} else {
 			setcookie("uname", "");
 			setcookie("password", "");
-			echo "Cookie not set";
+			// echo "Cookie not set";
 		}
 
 
