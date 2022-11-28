@@ -22,6 +22,7 @@
 
 
 	$unameErr = $passErr = "";
+	$uname = $pass = "";
 	$cookieTimeout = 120;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -74,7 +75,7 @@
 			$stmt = $conn->prepare($selectQuery);
 			$stmt->execute([
 				":uname" => $uname,
-				":password" => $password
+				":password" => $pass
 			]);
 
 			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
