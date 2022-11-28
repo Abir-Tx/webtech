@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>View Product</title>
+	<link rel="stylesheet" href="../scss/view.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
 
 
 		?>
-		<a href="../index.php">Go Homepage</a>
+		<a id="goHome" href="../index.php">Go Homepage</a>
 </body>
 
 </html>

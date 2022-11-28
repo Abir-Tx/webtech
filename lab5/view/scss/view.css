@@ -1,0 +1,19 @@
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body h2 {
+  text-align: center;
+}
+body table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+}
+body #goHome {
+  margin: auto;
+  padding: 10px;
+}/*# sourceMappingURL=view.css.map */

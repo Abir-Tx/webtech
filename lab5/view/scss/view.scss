@@ -1,0 +1,22 @@
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+  }
+
+  #goHome {
+    margin: auto;
+    padding: 10px;
+  }
+}
