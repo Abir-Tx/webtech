@@ -143,7 +143,7 @@
 
 			// Check both the password
 			if ($password === $cpassword) {
-				$pass = true;
+				$passed = true;
 			}
 
 			// DB
@@ -151,7 +151,7 @@
 			$insertQuery = "INSERT INTO users (name, email, uname, password, gender, dob, imageFile) VALUES (:name, :email,:uname, :password, :gender, :dob, :imageFile)";
 			try {
 				$stmt = $conn->prepare($insertQuery);
-				if ($pass) {
+				if ($passed) {
 					$stmt->execute([
 						":name" => $name,
 						":email" => $email,
