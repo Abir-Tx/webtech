@@ -19,9 +19,7 @@
 		<input type="text" name="search" placeholder="Search by name">
 		<input type="submit" name="submit" value="Search">
 	</form>
-
-
-
+	<a href="../index.php">Go Homepage</a>
 </body>
 
 </html>

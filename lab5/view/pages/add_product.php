@@ -28,6 +28,8 @@
 		<br>
 		<input type="submit" value="Save">
 	</form>
+
+	<a href="../index.php">Go Homepage</a>
 </body>
 
 </html>

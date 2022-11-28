@@ -50,7 +50,7 @@
 		</form>";
 	}
 	?>
-
+	<a href="../index.php">Go Homepage</a>
 </body>
 
 </html>
