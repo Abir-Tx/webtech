@@ -16,23 +16,26 @@
   <h1>
     Lab Task 5
   </h1>
-  <ul>
-    <a href="./pages/add_product.php">
-      <li>Add Product (A)</li>
-    </a>
 
-    <a href="./pages/view_product.php">
-      <li>View Product (B)</li>
-    </a>
+  <div class="listsCon">
+    <ul>
+      <a href="./pages/add_product.php">
+        <li>Add Product (A)</li>
+      </a>
 
-    <!--     <a href="./pages/edit_product.php">
+      <a href="./pages/view_product.php">
+        <li>View Product (B)</li>
+      </a>
+
+      <!--     <a href="./pages/edit_product.php">
       <li>Edit Product (C)</li>
     </a> -->
 
-    <a href="./pages/search_product.php">
-      <li>Search Product (E)</li>
+      <a href="./pages/search_product.php">
+        <li>Search Product (E)</li>
 
-  </ul>
+    </ul>
+  </div>
 
   <!-- create a footer -->
   <footer>
