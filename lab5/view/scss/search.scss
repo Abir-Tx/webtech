@@ -1,0 +1,30 @@
+body {
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  margin: 10px;
+
+  .inp {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .btn {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+}

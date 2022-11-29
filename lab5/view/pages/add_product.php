@@ -17,13 +17,13 @@
 	<div class="formCon">
 		<form action="../../controller/create_product.php" method="POST">
 			<label for="product_name">Name</label>
-			<input type="text" name="product_name" id="product_name" required>
+			<input type="text" name="product_name" id="product_name" required class="inp">
 			<br>
 			<label for="buying_price">Buying Price</label>
-			<input type="number" name="buying_price" id="buying_price" required>
+			<input type="number" name="buying_price" id="buying_price" required class="inp">
 			<br>
 			<label for="selling_price">Selling Price</label>
-			<input type="number" name="selling_price" id="selling_price" required>
+			<input type="number" name="selling_price" id="selling_price" required class="inp">
 			<br>
 			<input type="checkbox" name="display" id="display">
 			<label for="display">Display</label>

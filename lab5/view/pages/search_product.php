@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Search Product</title>
+	<link rel="stylesheet" href="../scss/search.css">
 </head>
 
 <body>
@@ -16,8 +17,8 @@
 	</h2>
 	<!-- Create a form with search input -->
 	<form action="../../controller/finder.php" method="POST">
-		<input type="text" name="search" placeholder="Search by name">
-		<input type="submit" name="submit" value="Search">
+		<input type="text" name="search" placeholder="Search by name" class="inp">
+		<input type="submit" name="submit" value="Search" class="btn">
 	</form>
 	<a href="../index.php">Go Homepage</a>
 </body>
