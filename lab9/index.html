@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Search</title>
+  </head>
+  <body>
+    <!-- Create a search box with search button and show the search results live using AJAX -->
+    <h1>Search Using AJAX</h1>
+    <!-- Search box -->
+    <input
+      type="text"
+      id="search"
+      placeholder="Search for a term"
+      onkeyup="searchMovie()"
+    />
+    <!-- Search button -->
+    <button type="button" id="btnsubmit">Search</button>
+
+    <div id="dis"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $.ajax({
+            url: "text.txt",
+            success: function (result) {
+              $("#dis").html(result);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
