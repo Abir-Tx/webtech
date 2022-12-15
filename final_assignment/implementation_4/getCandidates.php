@@ -17,6 +17,6 @@ $result = $sql->get_result();
 if (!empty($result)) {
 	// print the candidates
 	foreach ($result as $candidate) {
-		echo "<li>{$candidate['email']}</li>";
+		echo "<table> <tr> <th>First Name</th> <th>Last Name</th> <th>Education</th> <th>Ratings</th> <th>Skills</th> </tr> <tr> <td>" . $candidate["fname"] . "</td> <td>" . $candidate["lname"] . "</td> <td>" . $candidate["education"] . "</td> <td>" . $candidate["ratings"] . "</td> <td>" . $candidate["skills"] . "</td> </tr> </table>";
 	}
 }
