@@ -5,26 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Implementation 2</title>
+
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+        cursor: pointer;
+      }
+      td:hover {
+        background-color: #f1f1f1;
+      }
+
+      #phone {
+        margin-top: 20px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      #phone h1 {
+        margin: 0;
+      }
+
+      img {
+        /* small 50*50 image */
+        width: 50px;
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
     <h1>Implementation 2</h1>
 
-    <!-- Create a horizontal table with 5-6 phone names and onclick of that phone name invoke loadDoc() function  -->
     <table>
       <tr>
-        <td onclick="loadDoc('phone1')">Phone 1</td>
-        <td onclick="loadDoc('phone2')">Phone 2</td>
-        <td onclick="loadDoc('phone3')">Phone 3</td>
-        <td onclick="loadDoc('phone4')">Phone 4</td>
-        <td onclick="loadDoc('phone5')">Phone 5</td>
+        <td onclick="loadDoc('phone1')">
+          <img
+            src="http://shop.rushstarwireless.com/content/images/thumbs/0003413_samsung-galaxy-s8-plus-ds-silver-hso-abstock.jpeg"
+          />
+          Samsung Galaxy S8
+        </td>
+        <td onclick="loadDoc('phone2')">
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/cPeVH-m_b9pScRXzpCBW-nAHSfw=/0x0:2032x1355/1400x1400/filters:focal(1016x678:1017x679)/cdn.vox-cdn.com/uploads/chorus_asset/file/22863258/akrales_210917_4760_0175.jpg"
+            alt=""
+          />
+          Iphone 14
+        </td>
+        <td onclick="loadDoc('phone3')">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/bd/sm-n986bzngbkd/gallery/bd-galaxy-note20-ultra-5g-n986-sm-n986bzngbkd-456286389?$650_519_PNG$"
+            alt=""
+          />
+          Samsung Galaxy Note 20
+        </td>
+        <td onclick="loadDoc('phone4')">
+          <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVERUVEhISGBgYGRgYGBgSGBgYEhgSGBoZGRgYGRgcIS4lHB4rIRgYJjgmLC8xNTY1GiQ7QD00Py40NTEBDAwMEA8QHBISHjQsISU0NjQ0NDQxNDE0ND80NDQ0ND00NjQ0NDY0NDQ0NDQ0MTE0NDQ2PTQ0NDE2NDQxNDQ2OP/AABEIANcA6gMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABNEAABAgMDAg4PBgUEAwAAAAABAAIDBBESITEFQQYHEyI1UWFxcpGTsbKzFBckMjNCUlNzdIGDodHTIyU0VMHwFRZi0uFEY4LxQ5LC/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAECAwQFBv/EACoRAAICAQQBAwMEAwAAAAAAAAABAhEDBBIhMVETIkFhgZEFcaHRFCOx/9oADAMBAAIRAxEAPwCpyxPR5idmi6amWCHGiQwIcRzW2WuIY1re9a0NAwFSSSSophRfzk7yx+SXFPdk/wCtRekUHvUgYc2L+cneWcmnPjD/AFk5yzk696jPiKAGY8f85Ocq5IM1H/OTfKuRPe2zWuu2kUrYdEY2I8sYSLbhSobnpW6u+gEumpj85Ocs9Q57K8zDLbM3NGte+ivOFNojbV5My0sC6xGc6lqhLmgijGOYKWKPtPL2EtNG2a3hVGWYUtbAESIQGucHa0EkPFGlpGLmi5wO0aYgLBB/mOb/ADMblIn9ykN0VTNB9rEzX6pExGJ77OqGqMFAXw0VTPnImfGI+nPulG7RZM+cico/Gtdvf41Q1RoC8/mqZ85Ezf8AkfS6u7ujiWw0sNEcxEylChuiRC2IIjXtc9zmODIbntIa461wc3EZiQVzNbXSkI/i8vVtaiMAfJOovNrduBH/ACQFhlnKUxGnJgmamGBkR7KQ4j2to1xshrQbLQG0zVJJJKiGLH/OTnKvRx/xc7dTumMQK1oC8kX71ElxQkQ6ZmB/rJzlXpt07MfnJvlX/NG9MuUAM5Rmc03Ncq/HjSH5Smmmhmpsbjojx+qclI1hznDvrBDDnDiRUjds2x7VCDXPeXhrgxrXW3OBDa2TZbU4uLrNBjnwBQD38YmfzUzyr/mo85ohm2AUmo95zxH/ANyRRV2VcWf8v0UglfzVOfmYvKRP70f81Tn5mLykT+9UoCVRAXH80zn5mLykT+9D+aZz8zF5SJ/eqeiFEBb/AM0zn5mLykT+9a/Sy0STDsowYbo0RzXue17Xvc9hYIb3jWuJsuDmihG2ReucUWx0qx97S3Df1URSC4y5lWYsxJgTcZsVrnObZeWgWXkAWBcW0GBFKZl3ODUtaTiQD7SF5nyxIRaxoto6nWJrQdb3zhhXboduouzFempbwbOCOZQQefpk92z3rUXpFSX5Ofts4z8lDmj3fOetv+LyuiukoPm2LSEd1lJSo56/Jj/Kh8Z+SjPyVE8qHxu+S6SZGD5tibdk+D5piv6JXec1dkuJ5UPjd8kh2S4nlQ+N3yXSHZPgeaYmnSEDzTE9Eeoc4OTX+VD4z8lV5Sye+2NczvRnO2dxdWfIQPNM4lVzmT4Fs/ZMwGZSsNj1DmP8Pfts4z8kRknDOzjPyXQnyEDzTOJRosjB82ziU+gFMwZl3DO3jPyUuLkWYaCXwnNAEMm0Q0gRSRDqCai0WnepfRaWJKwgahjQQagi4gjAg7aizNHVLrTq0rac4k2e9rU30zKrw+C6kUMxkyOxhc+G4NFmpq00tUs3A57Q41qtKLZeX991L1RzfeOFXEUNxcSKgXXE7g4grvSi2XlvfdS9ZSjtJTH5s91znrD+dNuchPmk3N+sP50yXqpYN7ky8o3OTTnKAIeU255OJJphU4byN7k04oAwqzKh17d7nP8AhWNVVZRP2n/Ec5QEdqUiCUFIDoiKNEUAS2OlXsrLcN/VRFjlsdKrZaX4b+qiICXlj8FMcKJ1hXoCW8GzgjmXn/LH4KY4UTrF6AlvBs4I5lLIPPE+77wnPW39NdFdFXNsqOplCb9af0yty6Kt8C7Msj6JroybdGUN0VNujLpoyJjoya7IoahQ3xUkvBAvPjVw8UAmiAliaIIIIq01FwIrvEUKqpmaIddmN3EE494pUVF9DaIzgkX0G0VVxYgLn3OqA41qC3WgnCznpTHP7EVImhUSMo0WKjmxYJBZEF5Ac4iyabQsDnVfEipZZIOLEUGK9KiRFEiPWcmaRQ3Mu1rt48y0GlFsvLe+6l6zMd+tO8VptKHZeW991L1zZOy4eVXd2Tfp386jF6dy06k7NemfzqEXrIkdc9Mvcic9NFyANxRPYRiCN8EJDX0IO0QeJSp6eD20AcNcDfTMHD9UBFJVZPO+0Ps5q/qrCqq5k692/wDoFIEhKBSAlBAKqiJQRIAiVsdKnZWW4buqiLGlbLSp2VluG7qoiEE3K47hmOFE6wrv8t4NnBHMuBZX/ATHCidNd9lvBs4I5lLB5vyy6mUJv1p/TK1zoyxuXnUyjN+sxOmVpHxV06f5McvwSnRk06Oob4qafGXSZpE10ZE2ZAArXF9abTmhvHjcq50VBk2W4UxreK34VVWyyiTXxhZpaBqQSQDQUBAF95N54lVdlAFxMSo11WC1eTW4ilnHPWoxF6kfxF+Gt9o3vkqR2UXWS2jaULcL6G1nO0XEg/JUbZdRJbowY14DwS4AUAcMHA1dUDChF1ceOA+KkzM459LVBStAML6fIcSiOeTcMdzFVci6iOviJh70oQicTTcF5UqDKHcbum93F/0s3I6sOlnN8IgPhusk4XHHHBajSh2Xl/fdS9V8SExsN1BU2XXuvOBwzBWOlFsvL++6l6yl2W1Wn9BpXyyNl13ds16aJ8HEKCXKZohunZn0z/i4qutLM5hZKQSitJJcgDcUgoEpNUAuqq4vfu3yrMKscbzvlSABKRBGgAiKNEgElbLSp2VluG7qoixrlstKnZWW4buqiICflf8AATHCiceqLvst4NnBHMuB5Xb93zBu76IN3wnMu+S3g2cEcylkHmfREfvGb9ZidMq5fFVLolP3jN+sROmVNdEXRhdWUkroefETT4qYe9MuiLZyKKJIdESDEUZ0RItqjkXSJD4txVQH/sYqygwXxKthgk0O8Lkt0OHLjM9+fO0fPmUOR04dNKfufC8siwJBxFp5DW7v75qpxxY24VPwB/U+0qFM5Qc43kqKHkrNyOtSw4+IK35ZaCY8kAb3zRumA0Vcf3uKu1alwvKkS8DxnnDGuA+Z3EirN46h9R7/AIQuNFc5rjg2yccTcr3Sg2Xl/fdS9ZmbnwQWsFARQk98fkFptKDZeX991L1nJpvg8/U5N8lzZC0THu6Z9K/pFVdpWWik93TPpX9IqqqqMwF1QLkiqOqgBoIi5ECgFhVjVYOdcd4qvCkCwgiBQqgDRFCqIlAEVstKnZWW4buqiLGFbPSo2VluG/qoiAmZXfE7BmBYbYtxNdbFfCHxV6AlvBs4I5lwfLGxszw39Yu8S3g2cEcylkHmXRRsjNesROmU456Z0WXZRmvTxOmU0561xurIasde9NOem3PTTnrRyFDrnqbkjJr5iJZbc0d87MAntDmh+JNvNkFrG9884DcG2f3nFdRliPDlYWpQqDNd3znZySq2dWHAn7pdIp8sTcOXhOhwdqhd4zjv7SxMaYLjUlTZ+MX2ibyac6iQpRx8X2KtMvOc8j2xXHwhhgqnCaYf5V5L5BdSr9buClr25glvyC4Xthu33fpWgWMZKUqX5+C/+NOKtop4TQ0Wj+9wJiZmS+7BowAw/wC1ZxMkxXGmpkDNrm0+BUyT0LlxFpwbvi1/9BdKxZMnEFwcebUKKpdfRWZkNW20oNl5f33UvU+NoTgQpaM9zyXNhvc0ABotBhIuvJv3VA0otl5f33UPWeTFLG0pfJhjyb03TX78FbosPd8z6V/TcqmqttFv4+Z9K/puVQFkzUUCjRAo6qABCqKqAQAiHWu3ioIUyL3pUQKQGjCCNAEURRoigErZ6VGystw39VEWMK2elQPvWW4b+qiIC1yxsZM8N/WLu8t4NnBHMuEZX2NmOHE6xd3lvBs4I5lLIPNGjkUypOY+HdjjjVVL4ittHQrlWcAxMd4G/UUTUeVbAFmodE8Zwvaw7TP7uZaY4uVl4wciuLDi7W7+PEtJoS0KOm3BzqshA0L3UBcRi1gN1d2+m7cDK0L6EjGpHmiWwsQ2pD4nt8Vu7xbY2eVMssl4YDQ1oaLLGMoLhg0AYLeOOTdI7cOkcuX8D2Wp+BJwGwoRY1tKAAiriMd/H4rluUZkxIhc41rxAbSVlGbfHiF7ySTgPFa3MBuKfkjID4mvebDBi52fcaM5/e4ozTx4IuU3RuoN+1LhFTBlHP1sNtTUYYAbZOZXLJWHLNtPdV/xG8PF51NyhOw4DLEsy/O/xidv/PMspMMe51YjiCcAL3mu0MfbcvOg8uufFqC/LL5J49LHdJe59E2Pl11TYFk7ece3HmUX+Lu8d5O/Uj/Cmyeh97+9bTiPG7DiqruU0HwBfHe4nyWU+JNSvaw4HihtgvufOav9aipNSl9ly/4MuMsU8Vx+A+Kt5CPHdQiHZBwJuJG5XvvYFZTmUMnSdRDhiJEGDWm04H+pxuG9edxZzKGjSPEBa1jYbTiIdRXhHEq8tU4cOXPhHPHVanPH/XBpeXx+EWuUzFMKIHRABYfUG0XEWTUWbgN+9FpPloykwEOtkODCCA0UFX1rjVoIoL1jY09EcCCaA1rTdxWr0pHAZWlySAKxRfcKmC8DjJA9q8/Pm9RpnVgxzhF73bZA0YurPzBpTXmoqHa8XPvAANXWjhnVKFbaLXAz0wQQQYjyCLwQXuoQc4VQCsDoFgo0kI1ABVabQ7OyLIIbNQ2OeYpc5xZafqADKNaXQ3tJJta0WN194pmaoKQX0WclNRADIdOx7Ba+DWP2bUkRtVAP2dbJs2qWQW2TiYuUcpS5LjAl4LXao00cwGE6E1r60DhVpNWBzRnbVtKlU8c3e1MhAWGVY8N76QWMbDFSKNo8lxtG2aCoBNlozNAz1KgokKoA0ko6oiUAkrc6T4rlaDjcIhu9E8X7eKwxK3ek7srC3onVvQFtPR4AlYhfBJYCQ+9tXEWw8jOCSQK1N5adbS7t0t4NnBbzLguWIg/h0w20LVqIaVFqmqUrTaXeZbvGcEcylkHmXRk+uVJo1r3Q++lMH0F3sV3kjJrXxdVj94DUNPju3f6edUGi7ZKZ9PE6ZVvEylZaHPNx7xo7529ubq6cElG0z0NCotvd0qd+DWT+WQB3wAwFbgNoBZ+NBMZ1q2He3Wgb5uVGNUjutEGyNvwbRtVznbz7inh7IYxJO2cPY3aXatRFRaSr6nsxmpqkqj5fyWktCloQtPo92YUdYB3bN7t65Ki5Sa8+EtHCy0FoDdpopRqzE1lQnCvFfx1UGNOuLbLbgcad87cJzDc46rxs2lx5Zb8kmzCerx4n7VZoTlOX1QNDc5BLjccO9P6/9p+DOWSbEFjRnJAtHhOdUk75WFjtvCcZOxAKao6m0TULvw6qGOCio1Xg+Y12CepyObl38Nukbqa0SBjb3VPktuHtcf0WdnsuxItWlxa3yWEtB4TsXcypDMHOQk6uN1ZZtXOfC6KaX9OwYXulTZLbDb5DU6C0YNbxBV/ZG4k9kna+K4XCTPajqMcekvwWMWNrXAUwOA3Fc6WLK5Tlh/uV/wDVtr9Fk3xidpa7Sr2UluG7qytIRo5dRl9WSfgpstNsxi3aAHEKKCHKw0Qnul++q4FWMBQKVVJBQqoApBFVHVAIj4BMJ6OcE0pAEdEKI0AlEUopJQBFbfSifTK0C+lS8G6tawYlBuX0WJWz0pwP4rL3+M6m/qURAKy2Pso3Bf1kReipbwbOCOZedst+BjcF/WRF6JlvBs4I5lLIPL+i3ZOZ9YiceqFSXyjGkvmXh7vJB1opgDS87woomi7ZKZ9PE6ZSXwqrSDq+Ds0uWME7V9VfX3JczlkUo1twuFwDQBhQKqjTjnHAc6fMDcSex1ZuT7LZdZkyfJDMRyKp21PEtuJYldxU2nI5spo7TX2JGpq2jSuuwSOxtxNhVyRW6mhqas+xEOxFOwjcissIWFZ9iIjKqNg3IrCxa3SvYTlOXDRU2ycQNa1tpxv2mhx9ioo0tRrjuHmWm0oD97y3vupeokqF2Z/LjHNjubEFl7QGvFQaPFzhUEg0IOCrwrrRj+PmPSP6blTBUZIYRhAI0AEaCAUAajYhNhORsfYkBSA0SCCABSUpJQAWy0qNlZbhv6qIsYStnpUbKy3Df1URAPZagu7GjOprRbFbsdUfdt+MF6HlvBs4I5lwLK5+744/qidYV32W8GzgjmUsg8u6Ldk5n1iJ1hVsZZVWizZOZ9Zf1hWv7FW2FXZDltKPsTcWg0JZOhviO1QNLgNa1zA8EZzQ/L5FHY24pLQ2g+yh1ApUVBJpSpvxWrj4KxzKMrZW5bkmNjvEMANrgPFrmuuqNy5Weg/J8N0V1tjXuAFlrwHDdIacf3to4rGuBAhMbWl7a1G9U/uqKWhhtasa6uc1qMcCMMeZZZsMsmNxi6b+SVmSnurjwV2iaRY2ZcIbWtuFprRRodvZt5O6GJNhiPtsa99NY1wBadu4g5qp2PLgm5gbvVNd01OKVChBooYbXX1qahwwuqDufEqvoT9FQvnyWjqIrLva48FVliUYI7xDADa4DCue6gpfuKTkGBL1eJiwLgW29ytQN28cSlRpcE3Ma3cbUj4kqRCl2OFSyCCDTXFwqN7A44/07y6MK9NK+aObU1ntLi/BRZXl4erO1GzY1tLNKVIBOFRidtQTKrTTMuylGw4d4xY5xpv1uqoZldxWl7m3RSK2xUb6M7OS1IbztMdzFTdKE/fEt77qHqXlKWpAi8B/RKh6UGzEt77qHrmzKmjoxu0VmjI93zHpH9NypQVc6Mvx8x6R/TcqULE1FgowUkJQUAFUaII1IGIpvSUb8SiQAQQQQARFGiKAIraaVGysvw3dVEWLK2mlRsrL8N3VREIJuV/wMxwonWFegJbwbOCOZefssfgpjhROsK9Ay3g2cEcylg8v6LNlJj1mJ1hXQLAXP9Fh+9I/rL+sK6Ax1TQAnexW+FqKbfSMcvLS8igwJQYnJmXcxofTWE0DrTXa6+7WncKsMn5CixWNe0so4OLQXUcQ02XGzS+hpxrSOWEo7k/n/hSUJRlXD/borAwJVkJUzLuZGMFwBeHNZRpqC51LIBNPKCbexzXuYbFtlS5tthcLIBNwdeQHAkC+9aWilMSWoWQhLsLzQFovaNda8Y0HetP7wqmojrNKkXta66uDmhwF4xv3t9T80RyO2QisqZ/B49m3YbZwrbZjtUtVtbmKZyXJPmHlkMsBDS4l5IbZFBmB21G5VYVsYsorAU3KWS3wGNe9zHNc4tBYXHXDHvmjaUaXhl9aFrWilp7zRja4VP6C/HaKlOLVjkrcsM7mj+jf0CqHSg2XlvfdQ9aDK7u5o/o4nQcqDSf2XlvfdQ9c2o7Rvh6ZU6M/x8x6R/TcqQFXWjP8fMekf03KlC5zcUClVSQjQCqoVRIIBh5vKCI4o0AEEEEJAiKNEUICK2mlRsrL8N3VRFiytppT7Ky/Dd1URCCXlj8HMcKJ1hXoKW8GzgjmXn3LX4ONvv6xy9BS3g2cEcylg8u6MT95zPrETplXTMpFjw5sQ3bdojiVJo0P3lM+nidMpozTPKbxq8aaaZnlipKmrTNRlLRA6KxjA8MYy+zDDm1ea1cTnxPGrfJWjlsKFAY6Ex5g27L3F9avcXEmmOPwXP8Aslnlt405LzrGOrVhxFHBjhQimD2uFd2lyRhGKpdf2VV8cdGondEZiTvZNqn2kOJYBfY1ljW7xsfEqPMZShOjxYwZZe+24Ue6y18RrWveBStaDCudZ6JOMLiQ5jQcwIu4gBxADeSDNMp3zeNX48k8+C/ksuGESQ8OqWHXui0Fh1rxHNxwPwomJnKZfT7QijGs1rn3hjQwHXE3kCpzbgVTJzsNjw51HAVuBo4GhoWk1AINMQeOhDceaY57i2w0EkhowAzBL57I58HRTpiGtrUoFuxYt2X27NKY1WdyNojiSzy6FGFSwtOqNL2lpocDnuF6zOrt8pvGnZadY0kmy6ooKlutNQa0c1wOFMM6ceRz4NXljRbFmGMY+IxrWkupCaWVea3mm4QKYXKG/LBMJjNUpYc91QXhzi+z3xrfSzQbSz8zOsc9zhZbU3NbQNAwzJAmG+U3jTjyK+hdTc9WFEGqONWPFKuv1puT+lBsvLe+6h6zsWYaWOAcLweZaPSe2XlvfdS9Um7ZeHRUaMz3fMekf03KkBVzo02QmPSROm5UgWZoOByMOTYRoBy0itJKchQS+tKXC0a5mjF28EBGqhVSOw3UBq29trxsNbmp/WMKjFF2K6gN14Jz4BtrOL7tqqEDNUEuNBcwgOFCQD7D/kEexNoSgIIIkAFtNKfZWX4b+qiLFraaU+ysvw39VEQgmZb/AAkbfidY5egpbwbOCOZefMufg4u/E6xy9By3g2cEcylg8taN9kZn00XplUSvtG+yMz6aL0yqFQAII0EAVEClInYIBtBBBABBBBABBBBABbrSf2Xl/fdS9YVbrSf2Xl/fdS9SCm0abITHpInTcqQK60Z/j5j0kTpuVKCoJDCNJDkKoBSU2I5vekjeNLxgkVRONyADYrgahxBpSoJrQUoN64cSGqHbPGdqzzXbyQggFueTiSccTXG8pKFUKoQBEjRIAltdKbZWW4b+qiLFLa6U+ysvw39VEQEjLp7mij0nWPXoaW8GzgjmXm7RBMMAfCq60WRHjyaW33b9xXpGW8GzgjmUsHItFmlXMzEzEiy8WVsPe9/2xiMiAxCXFpstcHAEmhuNDQ4Kk7TM/wCekOUj/TRoKAF2mZ/z0hykf6aHaZn/AD0hykf6aNBAF2mZ/wA9IcpH+mh2mZ/z0hykf6aNBAAaTE/5yQ5SP9NA6TE/5yQ5SP8ATQQQCe0xP+dkOUj/AE0O0xP+dkOUj/TQQQA7TE/52Q5SP9NDtLz/AJ6Q5SP9NBBADtLz/npDlI/01rdAGl1FkplsaZiwCWB9hsC2605zS0lzntFAGk0AGJxuogggKzRTpVzMeZfEgRJWw9zngxjEbFFsklpstcHAEmhuO2LlT9pqf87IcpH+mgggD7TU/wCckOUj/TQ7TU/5yQ5SP9NBBADtNz/nJDlI/wBNDtNT/nJDlI/00EEAXaYn/OSHKR/podpif85IcpH+mgggB2mZ/wA5IcpH+mpMPSfmwBXsEnOdXmBU7dNSuQQQCoelJODNk8itQDFjGgoLqmDXEfE76N2lFNGmtkLv9+PtbkJBBAI7T03X/Q4XjV5jGvo1o9BelxFlZqHHjOl2iGXOa2A6I9z3ua5otOe1tGgOJoMTTCl4QQEPKWldMRI7gJqAJdziS4sJmgxxJLRraZ6d9TPQYLrLAAANoU4kEEB//9k="
+            alt=""
+          />
+          Sony Experia Z
+        </td>
+        <td onclick="loadDoc('phone5')">
+          <img
+            src="https://mobilemall.pk/public_html/images/product/product_1596848288Microsoft%20Lumia%20550.jpg"
+            alt=""
+          />
+          Microsoft Lumia 550
+        </td>
       </tr>
     </table>
 
-    <!-- Create a div with id="phone" -->
-
     <div id="phone"></div>
 
-    <!-- Create a script tag and write the loadDoc() function -->
     <script>
       function loadDoc(phone) {
         let xhttp = new XMLHttpRequest();
