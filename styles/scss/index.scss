@@ -59,5 +59,46 @@
         }
       }
     }
+
+    .backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: aqua;
+      padding: 10px;
+      border-radius: 80%;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      a {
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: rgb(31, 120, 140);
+        box-shadow: 2px 2px 4px grey;
+      }
+    }
+
+    footer {
+      .footerBody {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aqua;
+        color: rgb(0, 0, 0);
+        padding: 20px;
+
+        p {
+          a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              color: blue;
+            }
+          }
+        }
+      }
+    }
   }
 }

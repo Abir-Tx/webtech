@@ -49,4 +49,37 @@
 * body .landing .lab-con .tasks-con ul a li:hover {
   background-color: rgb(31, 120, 140);
   box-shadow: 2px 2px 4px grey;
+}
+* body .backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 80%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+* body .backToTop a {
+  text-decoration: none;
+}
+* body .backToTop:hover {
+  background-color: rgb(31, 120, 140);
+  box-shadow: 2px 2px 4px grey;
+}
+* body footer .footerBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aqua;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+* body footer .footerBody p a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+* body footer .footerBody p a:hover {
+  text-decoration: underline;
+  color: blue;
 }/*# sourceMappingURL=index.css.map */
