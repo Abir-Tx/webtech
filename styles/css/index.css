@@ -1,6 +1,10 @@
 * {
   margin: 0%;
   padding: 10px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 * body .title {
   text-align: center;
@@ -82,4 +86,18 @@
 * body footer .footerBody p a:hover {
   text-decoration: underline;
   color: blue;
+}
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 15px;
+}
+* ::-webkit-scrollbar-thumb {
+  background: aqua;
+  border-radius: 15px;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background: rgb(25, 181, 181);
 }/*# sourceMappingURL=index.css.map */
