@@ -8,7 +8,6 @@ My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabi
 
 ![Screenshot 2022-12-09 171528](https://user-images.githubusercontent.com/28858998/206690478-a423ed08-7932-45e4-87b6-972b5957239e.png)
 
-
 ## Personal Details
 
 - **Name**: Mushfiqur Rahman Abir
@@ -19,13 +18,21 @@ My Webtech Section G (Fall 22-23) Repo under respectable Sir Rashidul Hasan Nabi
 - **GitHub Profile**: https://www.github.com/abir-tx
 - **Public Email**: abirtx@yandex.com
 
-## Languages Used
+## Languages/Techs Used
 
 ### Mid-Term
 
 - HTML
 - CSS
 - PHP
+- JSON
+
+### Final Term
+
+- Javascript
+- JQuery
+- AJAX
+- MySQL
 
 ## Available Sites
 
